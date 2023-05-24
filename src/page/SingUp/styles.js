@@ -4,13 +4,13 @@ import background from "../../assets/fondo.png";
 export const Container = styled.div`
     color: ${({ theme }) => theme.colors.brown};
 
-    /* background: rgb(65,196,141);
-    background: linear-gradient(180deg, rgba(65,196,141,1) 0%, rgba(190,230,205,1) 100%); */
+    background: rgb(65,196,141);
+    background: linear-gradient(180deg, rgba(65,196,141,1) 0%, rgba(190,230,205,1) 100%);
 
     height: 100vh;
 
-    background-image: url(${background});
-    background-size: cover;
+    /* background-image: url(${background});
+    background-size: cover; */
 
     padding: 9rem 4.7rem;
 
