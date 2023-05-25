@@ -17,15 +17,21 @@ export function SingIn() {
 
       <form>
 
-        <p>Email</p>
-        <Input placeholder="Exemplo: exemplo@exemplo.com.br" />
-
-        <p>Senha</p>
-        <Input placeholder="No mínimo 6 caracteres" />
+      <h1>Faça login</h1>
+        
+        <div>
+          <p>Email</p>
+          <Input type="email" placeholder="Exemplo: exemplo@exemplo.com.br" />
+        </div>
+        
+        <div>
+          <p>Senha</p>
+          <Input type="password" placeholder="No mínimo 6 caracteres" />
+        </div>
 
         <Button title='Entrar' />
 
-        <TextButton href="/src/page/SingUp" title='Criat nova conta'/>
+        <TextButton href="/src/page/SingUp" title='Criar nova conta'/>
 
       </form>
       

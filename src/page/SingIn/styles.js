@@ -38,4 +38,87 @@ export const Container = styled.div`
 
     >form{
       text-align: left;
-    }`
+
+      >h1{
+        display: none;
+      }
+    }
+    
+@media screen and (min-width: 768px){
+  >form{
+    display: grid;
+    grid-template-columns: auto auto;
+
+    gap: 4rem;
+
+    >a{
+      border: 0.1rem solid ${({ theme }) => theme.colors.brown};
+      border-radius: 0.8rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0;
+
+      position: relative;
+      bottom: -30%;
+    }
+
+    >button{
+      height: 5rem;
+      
+      position: relative;
+      bottom: -30%;
+    }
+
+    >div{
+      >input{
+      margin-bottom: 0;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 1024px){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20%;
+
+  >.brand{
+    >h1{
+      font-size: 4.5rem;
+    }
+  }
+
+  >form{
+    width: 40rem;
+    padding: 6rem 4rem;
+
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.8px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    >h1{
+      display: inline;
+    }
+
+    >a{
+      position: relative;
+      left: 0;
+
+      padding: 0;
+
+      border: none;
+    }
+  }
+}
+    `

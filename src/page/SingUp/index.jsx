@@ -16,16 +16,23 @@ export function SingUp() {
       </div>
 
       <form>
-
-        <p>Seu nome</p>
-        <Input type="text" placeholder="Exemplo: Neymar da Silva" />
+        <h1>Crie sua conta</h1>
         
-        <p>Email</p>
-        <Input type="email" placeholder="Exemplo: exemplo@exemplo.com.br" />
-
-        <p>Senha</p>
-        <Input type="password" placeholder="No mínimo 6 caracteres" />
-
+        <div>
+          <p>Seu nome</p>
+          <Input type="text" placeholder="Exemplo: Neymar da Silva" />
+        </div>
+        
+        <div>
+          <p>Email</p>
+          <Input type="email" placeholder="Exemplo: exemplo@exemplo.com.br" />
+        </div>
+        
+        <div>
+          <p>Senha</p>
+          <Input type="password" placeholder="No mínimo 6 caracteres" />
+        </div>
+        
         <Button title='Criar conta' />
 
         <TextButton href="/src/page/SingIn" title='Já tenho uma conta'/>
