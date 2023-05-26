@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom/client'
 
 import { SingIn } from './page/SingIn'
 import { SingUp } from './page/SingUp'
-import { Menu } from './page/Menu'
+import { MenuClient } from './page/MenuClient'
+import { Home } from './page/home'
 import { GlobalStyle } from './styles/global'
 import { ThemeProvider } from 'styled-components'
 
@@ -13,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-        <Menu />
+        <Home />
     </ThemeProvider>
   </React.StrictMode>,
 )

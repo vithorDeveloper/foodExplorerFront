@@ -39,6 +39,9 @@ export const Container = styled.div`
     >form{
       text-align: left;
 
+      >div{
+        margin: 0.8rem 0 3.2rem;
+      }
 
       >h1{
         display: none;
@@ -65,6 +68,8 @@ export const Container = styled.div`
     }
 
     >div{
+      margin: 0;
+
       >input{
       margin-bottom: 0;
       }
@@ -108,6 +113,10 @@ export const Container = styled.div`
       left: 0;
 
       padding: 0;
+    }
+
+    >div{
+      margin: 0;
     }
   }
 }

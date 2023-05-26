@@ -42,6 +42,11 @@ export const Container = styled.div`
       >h1{
         display: none;
       }
+
+      >div{
+        
+      margin: 0.8rem 0 3.2rem;
+      }
     }
     
 @media screen and (min-width: 768px){
@@ -73,6 +78,7 @@ export const Container = styled.div`
     }
 
     >div{
+      margin: 0;
       >input{
       margin-bottom: 0;
       }
@@ -118,6 +124,10 @@ export const Container = styled.div`
       padding: 0;
 
       border: none;
+    }
+
+    >div{
+      margin: 0;
     }
   }
 }
