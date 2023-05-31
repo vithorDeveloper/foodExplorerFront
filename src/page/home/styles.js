@@ -37,8 +37,19 @@ export const Container = styled.div`
         }
     }
 }
-    >h2{
+
+    >section{
+        padding-bottom: 2.5rem;
+
+        >h2{
         padding: 2.4rem;
         font-size: 2rem
+        }
+
+        .containerMeals,
+        .containerMainDishes{
+            display: flex;
+            overflow-x: auto;
+        }
     }
 `

@@ -18,14 +18,37 @@ export function Home(){
           </div>
       </div>
 
-      <h2>Refeições</h2>
-      <DishCard />
+    <section>
+        <h2>Refeições</h2>
+      <div className="containerMeals">
+        <DishCard />
+        <DishCard />
+        <DishCard />
+        <DishCard />
+        <DishCard />
+        <DishCard />
+      </div>
 
-      <h2>Pratos Principais</h2>
-      <DishCard />
+        <h2>Pratos Principais</h2>
+        <div className="containerMainDishes">
+          <DishCard />
+          <DishCard />
+          <DishCard />
+          <DishCard />
+          <DishCard />
+          <DishCard />
+        </div>
 
-      <h2>Pratos Principais</h2>
-      <DishCard />
+        <h2>Pratos Principais</h2>
+      <div className="containerMainDishes">
+        <DishCard />
+        <DishCard />
+        <DishCard />
+        <DishCard />
+        <DishCard />
+        <DishCard />
+      </div>
+      </section>
 
       <Footer />
     </Container>
