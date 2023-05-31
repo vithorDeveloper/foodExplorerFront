@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 import { Input } from "../../components/input"
-import { RiCloseFill, RiSearchLine } from 'react-icons/ri'
 import { Footer } from "../../components/footer";
+import { RiCloseFill, RiSearchLine } from 'react-icons/ri'
 
 export function MenuAdm(){
   return(

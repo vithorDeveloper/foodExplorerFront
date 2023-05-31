@@ -36,6 +36,10 @@ export const Container = styled.div`
     >.containerImg{
       font-size: 1.8rem;
 
+      >img{
+        width: 10rem;
+      }
+
       >a{
         display: block;
         padding-bottom: 1rem;

@@ -6,8 +6,8 @@ export const Container = styled.div`
     padding: 2rem;
 
     background-color: ${({ theme }) => theme.colors.white};
-    /* position: absolute;
-    bottom: 0; */
+    position: absolute;
+    bottom: 0;
 
     display:  flex;
 

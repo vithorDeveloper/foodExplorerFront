@@ -46,6 +46,15 @@ export const Container = styled.div`
       >h1{
         display: none;
       }
+
+      >a{
+        display: flex;
+        justify-content: center;
+
+        padding-top: 3.6rem;
+
+        font-weight: bold;
+      }
     }
     
 @media screen and (min-width: 768px){
@@ -64,7 +73,7 @@ export const Container = styled.div`
       height: 5rem;
       
       position: relative;
-      bottom: -30%;
+      bottom: -22%;
     }
 
     >div{

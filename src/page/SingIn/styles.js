@@ -47,6 +47,15 @@ export const Container = styled.div`
         
       margin: 0.8rem 0 3.2rem;
       }
+
+      >a{
+        display: flex;
+        justify-content: center;
+
+        padding-top: 3.6rem;
+
+        font-weight: bold;
+      }
     }
     
 @media screen and (min-width: 768px){

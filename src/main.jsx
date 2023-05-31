@@ -4,10 +4,12 @@ import ReactDOM from 'react-dom/client'
 
 import { SingIn } from './page/SingIn'
 import { SingUp } from './page/SingUp'
-import { MenuClient } from './page/MenuClient'
-import { Home } from './page/home'
 import { GlobalStyle } from './styles/global'
+import { MenuClient } from './page/MenuClient'
+import { MenuAdm } from './page/MenuAdm'
+import { Home } from './page/Home'
 import { ThemeProvider } from 'styled-components'
+import { DishDetails } from './components/dishDetails'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

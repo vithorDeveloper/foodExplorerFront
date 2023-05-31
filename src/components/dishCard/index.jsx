@@ -1,7 +1,8 @@
 import { Button } from "../button";
 import { Container } from "./styles";
 import { FaRegHeart, FaMinus, FaPlus, FaAngleRight } from 'react-icons/fa'
-import prato from '../../assets/image 2.png'
+
+import prato from '../../assets/salada.svg'
 
 export function DishCard({title}){
   return(
