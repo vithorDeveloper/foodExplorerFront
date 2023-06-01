@@ -7,7 +7,7 @@ export const Container = styled.button`
 
     border-radius: 0.5rem;
 
-    background-color: ${({ theme }) => theme.colors.yellow};
+    background-color: ${({ theme }) => theme.colors.tomato};
     color: ${({ theme }) => theme.colors.brown};
 
     font-weight: bold;

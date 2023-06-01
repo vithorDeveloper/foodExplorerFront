@@ -1,30 +1,30 @@
 import { Button } from "../button";
 import { Container } from "./styles";
-import { FaRegHeart, FaMinus, FaPlus, FaAngleRight } from 'react-icons/fa'
+import { FaMinus, FaPlus, FaAngleRight } from 'react-icons/fa'
 
 import prato from '../../assets/salada.svg'
 
-export function DishCard({title}){
+export function DishCard({icon: Icon, title, price, quant, ...rest}){
   return(
     <Container>
       <button className="heartButton">
-        <FaRegHeart />
+        {Icon && <Icon size={24} />}
       </button>
 
       <div className="containerImg">
         <img src={prato} alt="" />
 
         <a href="#">
-          salada revanello 
+          {title} 
           <span><FaAngleRight /></span>
         </a>
 
-        <p>R$ 45,80</p>
+        <p>{price}</p>
       </div>
 
       <div className="containerQuantity">
         <FaMinus />
-        <p>01</p>
+        <p>{quant}</p>
         <FaPlus />
       </div>
 

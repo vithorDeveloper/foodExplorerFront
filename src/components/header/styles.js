@@ -24,5 +24,12 @@ export const Container = styled.div`
         position: relative;
         bottom: .1rem;
       }
+
+      >span{
+      color: ${({ theme }) => theme.colors.tomato};
+
+      font-size: 1.4rem;
+      font-weight: bold;
     }
+  }
 `

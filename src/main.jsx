@@ -4,19 +4,22 @@ import ReactDOM from 'react-dom/client'
 
 import { SingIn } from './page/SingIn'
 import { SingUp } from './page/SingUp'
+import { NewDish } from './page/NewDish'
+import { EditDish } from './page/EditDish'
+import { HomeAdm } from './page/HomeAdm'
+import { MenuAdm } from './page/MenuAdm'
 import { GlobalStyle } from './styles/global'
 import { MenuClient } from './page/MenuClient'
-import { MenuAdm } from './page/MenuAdm'
-import { Home } from './page/Home'
+import { HomeClient } from './page/HomeClient'
 import { ThemeProvider } from 'styled-components'
-import { DishDetails } from './components/dishDetails'
-
+import { DishDetailsAdm } from './page/DishDetailsAdm'
+import { DishDetailsClient } from './page/DishDetailsClient'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-        <Home />
+        <EditDish />
     </ThemeProvider>
   </React.StrictMode>,
 )

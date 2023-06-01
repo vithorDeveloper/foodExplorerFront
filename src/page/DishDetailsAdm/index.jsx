@@ -1,15 +1,15 @@
 import { Container } from "./styles";
 
-import { Header } from "../header";
-import { Footer } from "../footer";
-import { Button } from "../button";
-import { Tags } from "../ingredientTags";
-import { TextButton } from "../textButton";
+import { Header } from "../../components/header";
+import { Footer } from "../../components/footer";
+import { Button } from "../../components/button";
+import { Tags } from "../../components/ingredientTags";
+import { TextButton } from "../../components/textButton";
 import { FaMinus, FaPlus, FaShoppingCart, FaChevronLeft } from "react-icons/fa"
 
 import prato from "../../assets/salada.svg"
 
-export function DishDetails(){
+export function DishDetailsAdm(){
   return(
     <Container>
 
@@ -37,17 +37,7 @@ export function DishDetails(){
         <Tags title="tomate"/>
       </div>
 
-        <div className="containerButton">
-
-          <div className="containerQuantity">
-            <FaMinus />
-            <p>01</p>
-            <FaPlus />
-          </div>
-
-          <Button icon={FaShoppingCart} size={16} title="pedir ∙ R$ 25,00"/>
-
-        </div>
+          <Button title="Editar prato"/>
 
     </section>
 

@@ -26,8 +26,6 @@ export const Container = styled.div`
       right: 1rem;
       top: 1rem;
 
-      font-size: 2.5rem;
-
       background: transparent;
       color: ${({ theme }) => theme.colors.brown}
 

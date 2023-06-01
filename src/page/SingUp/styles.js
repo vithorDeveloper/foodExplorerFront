@@ -9,9 +9,6 @@ export const Container = styled.div`
 
     height: 100vh;
 
-    /* background-image: url(${background});
-    background-size: cover; */
-
     padding: 9rem 4.7rem;
 
     text-align: center;
@@ -54,6 +51,10 @@ export const Container = styled.div`
         padding-top: 3.6rem;
 
         font-weight: bold;
+      }
+
+      p{
+        padding-bottom: .8rem;
       }
     }
     

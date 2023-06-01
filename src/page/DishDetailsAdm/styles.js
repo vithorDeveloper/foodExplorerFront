@@ -49,25 +49,10 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 
     margin-bottom: 4.8rem;
   }
-
-  >.containerButton{
-      display: flex;
-      gap: 1.6rem;
-      margin: 0 auto 5.4rem;
-      max-width: 60rem;
-
-      .containerQuantity{
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      
-      font-size: 2rem;
-      font-weight: bold;
-    }
 
     >button{
       background-color: ${({ theme }) => theme.colors.tomato};
@@ -76,9 +61,11 @@ export const Container = styled.div`
       justify-content: center;
       gap: .9rem;
 
-      font-size: 1.2rem;
-    }
-  }
+      font-size: 1.5rem;
 
+      max-width: 30rem;
+
+      margin: 0 auto;
+    }
 }
 `
