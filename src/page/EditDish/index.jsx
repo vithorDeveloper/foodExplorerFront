@@ -50,9 +50,13 @@ export function EditDish(){
             isNew={true}
           / >
           <NewIngredient 
-            isNew={true}
+          placeholder={"macarrão"}
           / >
           <NewIngredient 
+          placeholder={"macarrão"}
+          / >
+          <NewIngredient 
+          placeholder={"macarrão"}
           / >
         </div>
 

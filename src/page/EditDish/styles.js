@@ -66,9 +66,12 @@ export const Form = styled.form`
 
     >.containerTags{
       display: flex;
-      justify-content: space-between;
       flex-direction: row;
       flex-wrap: wrap;
+
+      background-color: #9D978E;
+      padding-top: 1rem;
+      border-radius: .5rem;
     }
 
     >.containerButtons{
