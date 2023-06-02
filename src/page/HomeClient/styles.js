@@ -37,7 +37,7 @@ export const Container = styled.div`
             font-size: 1.2rem;
         }
     }
-}
+    }
 
     >section{
         padding-bottom: 2.5rem;
@@ -60,4 +60,54 @@ export const Container = styled.div`
     >div:last-child{
         position: relative;
     }
+
+@media (min-width: 768px){
+    >.containerMacarrone{
+        margin: 0 12rem 6.2rem 12rem;
+
+        div{
+            >h3{
+            font-size: 2.8rem;
+        }
+
+        >p{
+            font-size: 1.4rem;
+        }
+        }
+    }
+
+    >section{
+        >h2{
+        font-size: 3.2rem
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    >.containerMacarrone{
+        padding-right: 10%;
+
+        height: 26rem;
+
+        margin: 16rem 10rem 6.2rem;
+        
+        >img{
+            position: relative;
+            right: 8rem;
+            bottom: 7rem;
+            width: 62rem;
+            height: 40rem;
+        }
+
+        >div{
+        >h3{
+            font-size: 4rem;
+        }
+
+        >p{
+            font-size: 1.6rem;
+        }
+    }
+    }
+}
 `

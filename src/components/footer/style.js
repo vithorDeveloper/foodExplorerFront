@@ -35,4 +35,8 @@ export const Container = styled.div`
   >span{
     font-size: 1.2rem;
 }
+
+@media(min-width: 768px){
+  padding: 2rem 12rem;
+}
 `

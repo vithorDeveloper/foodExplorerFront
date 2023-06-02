@@ -52,6 +52,10 @@ export const Container = styled.div`
       >.icon{
           position: absolute;
         }
+
+      p{
+        color: orangered;
+      }
     }
 
     >.containerQuantity{
@@ -64,12 +68,36 @@ export const Container = styled.div`
       font-weight: bold;
     }
 
-    >.containerPrice{
-      font-size: 1.4rem
-    }
-
     >button{
       background-color: ${({ theme }) => theme.colors.tomato};
       color: ${({ theme }) => theme.colors.white}
     }
+
+@media(min-width: 768px){
+  /* .heartButton{
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+
+      background: transparent;
+      color: ${({ theme }) => theme.colors.brown}
+
+    } */
+
+    >.containerImg{
+      font-size: 2.2rem;
+
+      >img{
+        width: 17rem;
+      }
+    }
+
+    >.containerQuantity{      
+      font-size: 2.2rem;
+    }
+
+    >button{
+      font-size: 1.6rem;
+    }
+}
 `

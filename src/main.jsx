@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom/client'
 import { SingIn } from './page/SingIn'
 import { SingUp } from './page/SingUp'
 import { NewDish } from './page/NewDish'
-import { EditDish } from './page/EditDish'
 import { HomeAdm } from './page/HomeAdm'
 import { MenuAdm } from './page/MenuAdm'
+import { EditDish } from './page/EditDish'
 import { GlobalStyle } from './styles/global'
 import { MenuClient } from './page/MenuClient'
 import { HomeClient } from './page/HomeClient'
@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-        <EditDish />
+        <HomeClient />
     </ThemeProvider>
   </React.StrictMode>,
 )

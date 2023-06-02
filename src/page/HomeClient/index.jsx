@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
 import { DishCard } from "../../components/dishCard"
-import assets from "../../assets/macarrone.png"
+import assets from "../../assets/pngegg 2.svg"
 import { FaRegHeart } from 'react-icons/fa'
 
 
