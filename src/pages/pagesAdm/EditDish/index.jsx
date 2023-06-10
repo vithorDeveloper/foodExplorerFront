@@ -7,7 +7,7 @@ import { HeaderDesktop} from "../../../components/desktop/headerAdm"
 import { FooterMobile } from "../../../components/mobile/footer";
 import { FooterDesktop } from "../../../components/desktop/footer";
 import { TextButton } from "../../../components/responsive/textButton";
-import { NewIngredient } from "../../../components/responsive/NewIngredient";
+import { NewIngredient } from "../../../components/responsive/newIngredient";
 import { Link } from "react-router-dom"
 
 import { FaChevronLeft, FaDownload, FaAngleDown} from "react-icons/fa"

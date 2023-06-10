@@ -6,7 +6,7 @@ import { HeaderMobile } from "../../../components/mobile/headerAdm"
 import { HeaderDesktop} from "../../../components/desktop/headerAdm"
 import { FooterMobile } from "../../../components/mobile/footer";
 import { FooterDesktop } from "../../../components/desktop/footer";
-import { NewIngredient } from "../../../components/responsive/NewIngredient";
+import { NewIngredient } from "../../../components/responsive/newIngredient";
 import { TextButton } from "../../../components/responsive/textButton";
 
 import { FaChevronLeft, FaDownload, FaAngleDown} from "react-icons/fa"
