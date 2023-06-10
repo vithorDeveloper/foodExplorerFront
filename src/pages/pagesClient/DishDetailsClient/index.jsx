@@ -1,13 +1,13 @@
-import { Container, SectionMobile, SectionDesktop } from "./styles";
+import { Container, SectionMobile, SectionDesktop } from "./styles"
 
-import { HeaderMobile } from "../../../components/mobile/headerClient"
-import { HeaderDesktop} from "../../../components/desktop/headerClient"
-import { FooterDesktop } from "../../../components/desktop/footer";
-import { FooterMobile } from "../../../components/mobile/footer";
-import { Button } from "../../../components/responsive/button";
-import { Tags } from "../../../components/responsive/tagIngredient";
 import { Link } from 'react-router-dom'
-import { TextButton } from "../../../components/responsive/textButton";
+import { Button } from "../../../components/responsive/button"
+import { FooterMobile } from "../../../components/mobile/footer"
+import { FooterDesktop } from "../../../components/desktop/footer"
+import { Tags } from "../../../components/responsive/tagIngredient"
+import { HeaderMobile } from "../../../components/mobile/headerClient"
+import { TextButton } from "../../../components/responsive/textButton"
+import { HeaderDesktop} from "../../../components/desktop/headerClient"
 import { FaMinus, FaPlus, FaShoppingCart, FaChevronLeft } from "react-icons/fa"
 
 import prato from "../../../assets/salada.svg"
@@ -43,19 +43,18 @@ export function DishDetailsClient(){
         <Tags title="tomate"/>
       </div>
 
-        <div className="containerButton">
-
-          <div className="containerQuantity">
-            <FaMinus />
-            <p>01</p>
-            <FaPlus />
-          </div>
-
-          <Button icon={FaShoppingCart} size={16} title="pedir ∙ R$ 25,00"/>
-
+      <div className="containerButton">
+        <div className="containerQuantity">
+          <FaMinus />
+          <p>01</p>
+          <FaPlus />
         </div>
 
+        <Button icon={FaShoppingCart} size={16} title="pedir ∙ R$ 25,00"/>
+      </div>
+
     </SectionMobile>
+
       <FooterMobile />
 
     <SectionDesktop>
@@ -80,7 +79,6 @@ export function DishDetailsClient(){
         </div>
 
         <div className="containerButton">
-
           <div className="containerQuantity">
             <FaMinus />
             <p>01</p>
@@ -88,11 +86,11 @@ export function DishDetailsClient(){
           </div>
 
           <Button icon={FaShoppingCart} size={16} title="pedir ∙ R$ 25,00"/>
-
         </div>
       </div>
 
     </SectionDesktop>
+
       <FooterDesktop />
       
     </Container>

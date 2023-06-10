@@ -33,43 +33,19 @@ export const Container = styled.div`
         }
 
         >div{
-        >h3{
-            font-size: 1.8rem;
-            line-height: .9;
-            padding-bottom: 1rem;
-        }
-
-        >p{
-            font-size: 1.2rem;
-        }
-    }
-    }
-
-    >section{
-        padding: 0 0 2.5rem 1.6rem;
-
-        >h2{
-        padding: 2.4rem;
-        font-size: 2rem
-        }
-
-        >div{
-            >.dishMobile,
-            >.dishDesktop{
-            display: flex;
-            overflow-x: auto;
-            ::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
-
-            width: 100%;
-            }
+            >h3{
+                font-size: 1.8rem;
+                line-height: .9;
+                padding-bottom: 1rem;
             }
 
-            >.dishDesktop{
-            display: none;
+            >p{
+                font-size: 1.2rem;
             }
         }
     }
+
+
 
 @media (min-width: 768px){
 
@@ -92,29 +68,11 @@ export const Container = styled.div`
 
         div{
             >h3{
-            font-size: 2.8rem;
-        }
-
-        >p{
-            font-size: 1.4rem;
-        }
-        }
-    }
-
-    >section{
-        padding-left: 4rem;
-
-        >h2{
-        font-size: 3.2rem
-        }
-
-        >div{
-            .dishMobile{
-                display: none;
+                font-size: 2.8rem;
             }
 
-            .dishDesktop{
-                display: flex;
+            >p{
+                font-size: 1.4rem;
             }
         }
     }
@@ -138,14 +96,60 @@ export const Container = styled.div`
         }
 
         >div{
-        >h3{
-            font-size: 4rem;
-        }
+            >h3{
+                font-size: 4rem;
+            }
 
-        >p{
-            font-size: 1.6rem;
+            >p{
+                font-size: 1.6rem;
+            }
         }
-    }
     }
 }
+`
+
+export const Section = styled.section`
+    >section{
+        padding: 0 0 2.5rem 1.6rem;
+
+        >h2{
+            padding: 2.4rem;
+            font-size: 2rem;
+        }
+
+        >div{
+            >.dishMobile,
+            >.dishDesktop{
+            display: flex;
+            overflow-x: auto;
+            ::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+
+            width: 100%;
+            }
+        }
+
+            >.dishDesktop{
+            display: none;
+            }
+        }
+    }
+
+    @media (min-width: 768px){
+        padding-left: 4rem;
+
+        >h2{
+        font-size: 3.2rem
+        }
+
+        >div{
+            .dishMobile{
+                display: none;
+            }
+
+            .dishDesktop{
+                display: flex;
+            }
+        }
+    }
 `

@@ -1,6 +1,6 @@
-import { Button } from "../../responsive/button";
 import { Container } from "./styles";
 import { Link } from 'react-router-dom'
+import { Button } from "../../responsive/button";
 import { FaMinus, FaPlus, FaAngleRight } from 'react-icons/fa'
 
 import prato from '../../../assets/salada.svg'

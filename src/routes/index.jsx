@@ -1,15 +1,15 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom"
 
-// import { AppRoutesClient } from "./app.routes.client";
-import { AppRoutesAdm } from "./app.routes.adm";
-// import { AuthRoutes } from "./auth.routes";
+import { AuthRoutes } from "./auth.routes"
+// import { AppRoutesAdm } from "./app.routes.adm"
+// import { AppRoutesClient } from "./app.routes.client"
 
 export function Routes(){
   return(
     <BrowserRouter>
     {/* <AppRoutesClient/> */}
-    <AppRoutesAdm/>
-    {/* <AuthRoutes/> */}
+    {/* <AppRoutesAdm/> */}
+    <AuthRoutes/>
   </BrowserRouter>
   )
 }

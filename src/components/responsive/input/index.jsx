@@ -2,7 +2,7 @@ import { Container } from "./styles";
 
 export function Input({icon: Icon,...rest}){
     const size = 32;
-    
+
     return(
       <Container
       >

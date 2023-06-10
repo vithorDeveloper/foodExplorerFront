@@ -33,41 +33,17 @@ export const Container = styled.div`
         }
 
         >div{
-        >h3{
-            font-size: 1.8rem;
-            line-height: .9;
-            padding-bottom: 1rem;
-        }
+            >h3{
+                font-size: 1.8rem;
+                line-height: .9;
+                padding-bottom: 1rem;
+            }
 
         >p{
             font-size: 1.2rem;
         }
     }
 }
-
-    >section{
-        padding-bottom: 2.5rem;
-
-        >h2{
-        padding: 2.4rem;
-        font-size: 2rem
-        }
-
-        >div{
-            >.dishMobile,
-            >.dishDesktop{
-            display: flex;
-            overflow-x: scroll;
-            ::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
-            } 
-            }
-
-            .dishDesktop{
-                display: none;
-            }
-        }
-    }
 
     >div:last-child{
         position: relative;
@@ -89,64 +65,88 @@ export const Container = styled.div`
         position: relative;
     }
 
->.containerMacarrone{
-    margin: 0 12rem 6.2rem 12rem;
+    >.containerMacarrone{
+        margin: 0 12rem 6.2rem 12rem;
 
-    div{
-        >h3{
-        font-size: 2.8rem;
-    }
+        div{
+            >h3{
+                font-size: 2.8rem;
+            }
 
-    >p{
-        font-size: 1.4rem;
-    }
-    }
-}
-
->section{
-    padding-left: 4rem;
-
-    >h2{
-    font-size: 3.2rem
-    }
-
-    >div{
-        .dishMobile{
-            display: none;
-        }
-
-        .dishDesktop{
-            display: flex;
+            >p{
+                font-size: 1.4rem;
+            }
         }
     }
-}
 }
 
 @media (min-width: 1024px){
->.containerMacarrone{
-    padding-right: 10%;
+    >.containerMacarrone{
+        padding-right: 10%;
 
-    height: 26rem;
+        height: 26rem;
 
-    margin: 16rem 10rem 6.2rem;
-    
-    >img{
-        position: relative;
-        right: 8rem;
-        bottom: 7rem;
-        width: 62rem;
-        height: 40rem;
+        margin: 16rem 10rem 6.2rem;
+        
+        >img{
+            position: relative;
+            right: 8rem;
+            bottom: 7rem;
+            width: 62rem;
+            height: 40rem;
+        }
+
+        >div{
+            >h3{
+                font-size: 4rem;
+            }
+
+            >p{
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+`
+
+export const Section = styled.section`
+    padding-bottom: 2.5rem;
+
+    >h2{
+    padding: 2.4rem;
+    font-size: 2rem
     }
 
     >div{
-    >h3{
-        font-size: 4rem;
+        >.dishMobile,
+        >.dishDesktop{
+        display: flex;
+        overflow-x: scroll;
+            ::-webkit-scrollbar {
+            display: none; 
+        } 
+        }
+
+        .dishDesktop{
+            display: none;
+        }
     }
 
-    >p{
-        font-size: 1.6rem;
+    @media (min-width: 768px){
+        padding-left: 4rem;
+
+        >h2{
+            font-size: 3.2rem
+        }
+
+        >div{
+            .dishMobile{
+                display: none;
+            }
+
+            .dishDesktop{
+                display: flex;
+            }
+        }
     }
-}
-}
-}
 `

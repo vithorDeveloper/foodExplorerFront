@@ -1,26 +1,29 @@
-import { Container } from "./styles";
-import { Input } from "../../../components/responsive/input"
-import { FooterMobile } from "../../../components/mobile/footer";
+import { Container, Section } from "./styles"
+
 import { RiCloseFill, RiSearchLine } from 'react-icons/ri'
+import { Input } from "../../../components/responsive/input"
+import { FooterMobile } from "../../../components/mobile/footer"
 
 export function MenuAdm(){
   return(
     <Container>
+
         <header>
           <RiCloseFill size={40} />
           <h1>Menu</h1>
         </header>
 
-        <section>
+        <Section>
           <Input icon={RiSearchLine} placeholder="Busque por pratos ou ingredientes"/>
 
-        <div>
-          <a href="#">Novo prato</a>
-          <a href="#">Sair</a>
-        </div>
-        </section>
+          <div>
+            <a href="#">Novo prato</a>
+            <a href="#">Sair</a>
+          </div>
+        </Section>
         
       <FooterMobile />
+
     </Container>
   )
 }

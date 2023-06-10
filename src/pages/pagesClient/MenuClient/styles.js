@@ -21,14 +21,19 @@ export const Container = styled.div`
     }
   }
 
-  >section{
-    color: ${({ theme }) => theme.colors.white};
-    padding: 3rem;
+  footer:last-child{
+    position: absolute;
+  }
+`
 
-    >div{
-      margin-top: 3rem;
-      
-      >a{
+export const Section = styled.section`
+  color: ${({ theme }) => theme.colors.white};
+  padding: 3rem;
+
+  >div{
+    margin-top: 3rem;
+    
+    >a{
       color: ${({ theme }) => theme.colors.brown};
       font-size: 2.4rem;
 
@@ -38,10 +43,5 @@ export const Container = styled.div`
 
       display: flex;
     }
-  }
-  }
-
-  footer:last-child{
-    position: absolute;
   }
 `

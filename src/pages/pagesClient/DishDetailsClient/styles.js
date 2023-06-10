@@ -47,197 +47,197 @@ export const Container = styled.div`
 
   >section:nth-child(5){
     >.containerDish{
-  img{
-    width: 38rem;
-  }
-  }
+      img{
+        width: 38rem;
+      }
+    }
   }
 }
 `
 
 export const SectionMobile = styled.section`
-padding: 0 5.6rem;
+  padding: 0 5.6rem;
 
->.containerDish{
-  img{
-    width: 26rem;
-    padding-bottom: 1.6rem;
+  >.containerDish{
+    img{
+      width: 26rem;
+      padding-bottom: 1.6rem;
+    }
+
+    h3{
+      font-size: 2.7rem;
+      padding-bottom: 2.4rem;
+    }
+
+    p{
+      font-size: 1.6rem;
+      margin: 0 auto;
+      padding-bottom: 2.4rem;
+
+      width: 30rem;
+    }
   }
 
-  h3{
-  font-size: 2.7rem;
-  padding-bottom: 2.4rem;
+  >.containerTags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    margin-bottom: 4.8rem;
   }
 
-  p{
-    font-size: 1.6rem;
-    margin: 0 auto;
-    padding-bottom: 2.4rem;
-
-    width: 30rem;
-  }
-}
-
->.containerTags{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-
-  margin-bottom: 4.8rem;
-}
-
->.containerButton{
+  >.containerButton{
     display: flex;
     gap: 1.6rem;
     margin: 0 auto 5.4rem;
     max-width: 60rem;
 
     .containerQuantity{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    
-    font-size: 2rem;
-    font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    >button{
+      background-color: ${({ theme }) => theme.colors.tomato};
+
+      display: flex;
+      justify-content: center;
+      gap: .9rem;
+
+      font-size: 1.2rem;
+    }
   }
-
-  >button{
-    background-color: ${({ theme }) => theme.colors.tomato};
-
-    display: flex;
-    justify-content: center;
-    gap: .9rem;
-
-    font-size: 1.2rem;
-  }
-}
 `
 
 export const SectionDesktop = styled.section`
-@media (min-width: 768px){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8rem 2rem 0 2rem;
+  @media (min-width: 768px){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8rem 2rem 0 2rem;
 
-  >.containerDish{
-  img{
-    width: 30rem;
-    margin-right: 4rem;
-  }
-}
+    >.containerDish{
+      img{
+        width: 30rem;
+        margin-right: 4rem;
+      }
+    }
 
->div{
-  >.containerTitulo{
-    text-align: left;
+    >div{
+      >.containerTitulo{
+        text-align: left;
 
-  h3{
-  font-size: 3rem;
-  padding-bottom: 1rem;
-  }
+        h3{
+          font-size: 3rem;
+          padding-bottom: 1rem;
+        }
 
-  p{
-    font-size: 1.8rem;
-    padding-bottom: 2.4rem;
-  }
-  }
+        p{
+          font-size: 1.8rem;
+          padding-bottom: 2.4rem;
+        }
+      }
 
-  >.containerTags{
-  display: flex;
-  gap: .4rem;
+      >.containerTags{
+        display: flex;
+        gap: .4rem;
 
-  margin-bottom: 2.4rem;
+        margin-bottom: 2.4rem;
 
-  >span{
-    font-size: 1.3rem;
-  }
-}
+        >span{
+          font-size: 1.3rem;
+        }
+      }
 
->.containerButton{
-    display: flex;
-    gap: 1.6rem;
+    >.containerButton{
+        display: flex;
+        gap: 1.6rem;
 
-    .containerQuantity{
-    display: flex;
-    align-items: center;
-    gap: 1.4rem;
-    
-    font-size: 2rem;
-    font-weight: bold;
-  }
+      .containerQuantity{
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+        
+        font-size: 2rem;
+        font-weight: bold;
+      }
 
-  >button{
-    background-color: ${({ theme }) => theme.colors.tomato};
+        >button{
+          background-color: ${({ theme }) => theme.colors.tomato};
 
-    display: flex;
-    justify-content: center;
-    gap: .9rem;
+          display: flex;
+          justify-content: center;
+          gap: .9rem;
 
-    font-size: 1.2rem;
+          font-size: 1.2rem;
 
-    width: 20rem;
-  }
-  }
-}
-}
-
-@media (min-width: 1024px){
-  width: 70%;
-  margin: 0 auto;
-
->div{
-  >.containerTitulo{
-    text-align: left;
-
-  h3{
-  font-size: 4rem;
-  padding-bottom: 2.4rem;
+          width: 20rem;
+        }
+      }
+    }
   }
 
-  p{
-    font-size: 2.4rem;
-    padding-bottom: 2.4rem;
+  @media (min-width: 1024px){
+    width: 70%;
+    margin: 0 auto;
+
+  >div{
+    >.containerTitulo{
+      text-align: left;
+
+      h3{
+        font-size: 4rem;
+        padding-bottom: 2.4rem;
+      }
+
+      p{
+        font-size: 2.4rem;
+        padding-bottom: 2.4rem;
+      }
+    }
+
+    >.containerTags{
+      display: flex;
+      gap: .4rem;
+
+      margin-bottom: 2.4rem;
+
+      >span{
+        font-size: 1.6rem;
+        width: 8.4rem;
+      }
+    }
+
+    >.containerButton{
+      display: flex;
+      gap: 2rem;
+
+      .containerQuantity{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      >button{
+        background-color: ${({ theme }) => theme.colors.tomato};
+
+        display: flex;
+        justify-content: center;
+        gap: .8rem;
+
+        font-size: 1.4rem;
+
+        width: 20rem;
+      }
+    }
   }
-  }
-
-  >.containerTags{
-  display: flex;
-  gap: .4rem;
-
-  margin-bottom: 2.4rem;
-
-  >span{
-    font-size: 1.6rem;
-    width: 8.4rem;
-  }
-}
-
->.containerButton{
-    display: flex;
-    gap: 2rem;
-
-  .containerQuantity{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  >button{
-    background-color: ${({ theme }) => theme.colors.tomato};
-
-    display: flex;
-    justify-content: center;
-    gap: .8rem;
-
-    font-size: 1.4rem;
-
-    width: 20rem;
-  }
-  }
-}
 }
 `

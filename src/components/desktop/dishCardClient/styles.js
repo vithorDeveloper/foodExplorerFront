@@ -5,17 +5,16 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 0 0 auto;
     gap: 2rem;
 
     text-align: center;
 
-    flex: 0 0 auto;
-
     background: rgba(255, 255, 255, 0.25);
-    border-radius: .6rem;
-    backdrop-filter: blur(11px);
     color: ${({ theme }) => theme.colors.brown };
 
+    border-radius: .6rem;
+    backdrop-filter: blur(11px);
     border: .1rem solid ${({ theme }) => theme.colors.green_100};
 
     padding: 2.4rem;
@@ -29,7 +28,6 @@ export const Container = styled.div`
 
       background: transparent;
       color: ${({ theme }) => theme.colors.brown}
-
     }
 
     >.containerImg{
@@ -74,6 +72,5 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.colors.white};
       font-size: 1.6rem;
     }
-
 }
 `

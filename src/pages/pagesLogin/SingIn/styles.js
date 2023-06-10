@@ -33,35 +33,52 @@ export const Container = styled.div`
     }
 
     >form{
-      text-align: left;
-
-      >h1{
-        display: none;
-      }
-
-      >div{
-        
-      margin: 0.8rem 0 3.2rem;
-      }
-
-      >a{
-        display: flex;
-        justify-content: center;
-
-        padding-top: 3.6rem;
-
-        font-weight: bold;
-
-        font-size: .5rem;
-      }
-
-      p{
-        padding-bottom: .8rem;
-      }
+      
     }
+
+@media screen and (min-width: 1024px){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20%;
+
+  >.brand{
+    >h1{
+      font-size: 4.5rem;
+    }
+  }
+}
+`
+
+export const Form = styled.form`
+  text-align: left;
+
+  >h1{
+    display: none;
+  }
+
+  >div{
     
-@media screen and (min-width: 768px){
-  >form{
+  margin: 0.8rem 0 3.2rem;
+  }
+
+  >a{
+    display: flex;
+    justify-content: center;
+
+    padding-top: 3.6rem;
+
+    font-weight: bold;
+
+    font-size: .5rem;
+  }
+
+  p{
+    padding-bottom: .8rem;
+  }
+
+  @media (min-width: 768px){
     display: grid;
     grid-template-columns: auto auto;
 
@@ -94,24 +111,9 @@ export const Container = styled.div`
       margin-bottom: 0;
       }
     }
-
-  }
-}
-
-@media screen and (min-width: 1024px){
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 20%;
-
-  >.brand{
-    >h1{
-      font-size: 4.5rem;
-    }
   }
 
-  >form{
+  @media (min-width: 1024px){
     width: 40rem;
     padding: 6rem 4rem;
 
@@ -141,5 +143,4 @@ export const Container = styled.div`
       margin: 0;
     }
   }
-}
-    `
+`

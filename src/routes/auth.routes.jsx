@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"
 
 import { SingUp } from '../pages/pagesLogin/SingUp'
 import { SingIn } from '../pages/pagesLogin/SingIn'

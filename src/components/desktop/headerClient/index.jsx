@@ -1,13 +1,13 @@
 import { Container } from "./styles";
 import { Link } from 'react-router-dom'
-
-
 import { Input } from "../../responsive/input";
+
 import { SignOut, ShoppingCart, MagnifyingGlass } from "@phosphor-icons/react"
 
 import logo from "../../../assets/brand2.png"
 
 export function HeaderDesktop({title}){
+
   return(
     <Container>
 
@@ -17,10 +17,10 @@ export function HeaderDesktop({title}){
         <span>{title}</span>
       </div>
 
-        <Input
-          placeholder={"Busque por pratos ou ingredientes"}
-          icon={MagnifyingGlass}
-        />
+      <Input
+        placeholder={"Busque por pratos ou ingredientes"}
+        icon={MagnifyingGlass}
+      />
 
       <div className="containerIcon">
         <ShoppingCart size={28} className="iconCar"/>
@@ -30,6 +30,7 @@ export function HeaderDesktop({title}){
       <Link to="/login">
           <SignOut size={28} color="black"/>
       </Link>
+
     </Container>
   )
 }

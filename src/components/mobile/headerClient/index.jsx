@@ -14,7 +14,7 @@ export function HeaderMobile({title}){
         <span>{title}</span>
       </div>
 
-        <ShoppingCart size={28}/>
+      <ShoppingCart size={28}/>
     </Container>
   )
 }

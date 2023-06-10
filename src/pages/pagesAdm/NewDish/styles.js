@@ -27,33 +27,33 @@ export const Container = styled.div`
       position: relative;
     }
 
-@media (min-width: 768px){
-  height: 100vh;
+  @media (min-width: 768px){
+    height: 100vh;
 
-  >div:last-child{
+    >div:last-child{
       position: absolute;
     }
 
     >div:first-child,
     >main:nth-child(3),
     >footer:nth-child(4){
-        display: none;
+      display: none;
     }
 
     >div:nth-child(2),
     >main:nth-child(5),
     >footer:nth-child(6){
-        display: flex;
+      display: flex;
     }
-}
+  }
 
-@media (min-width: 1024px){
-  main:nth-child(5){
-    >form{
-    width: 60%;
+  @media (min-width: 1024px){
+    main:nth-child(5){
+      >form{
+        width: 60%;
+      }
+    }
   }
-  }
-}
 `
 
 export const TextArea = styled.textarea`
@@ -75,34 +75,34 @@ export const TextArea = styled.textarea`
 `
 
 export const Form = styled.form`
-    padding: 2.4rem 0 5.3rem;
+  padding: 2.4rem 0 5.3rem;
 
-    >h1{
-      padding-bottom: 2rem;
-    }
+  >h1{
+    padding-bottom: 2rem;
+  }
 
-    >p{
-      padding-bottom: .8rem;
-    }
+  >p{
+    padding-bottom: .8rem;
+  }
 
-    >div{
-      margin-bottom: 2.4rem;
-    }
+  >div{
+    margin-bottom: 2.4rem;
+  }
 
-    >div:nth-child(7){
-      display: flex;
-      flex-direction: row-reverse;
-    }
+  >div:nth-child(7){
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
-    >.containerTags{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+  >.containerTags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-      background-color: #9D978E;
-      padding-top: 1rem;
-      border-radius: .5rem;
-    }
+    background-color: #9D978E;
+    padding-top: 1rem;
+    border-radius: .5rem;
+  }
 `
 
 export const MainMobile = styled.main`
@@ -114,25 +114,25 @@ export const MainDesktop = styled.main`
   display: flex;
   justify-content: center;
 
->form{
-  width: 80%;
+  >form{
+    width: 80%;
 
-  h1{
-    padding-top: 2.4rem;
-  }
+    h1{
+      padding-top: 2.4rem;
+    }
 
-  div{
-    width: 100%;
-  }
+    div{
+      width: 100%;
+    }
 
-  p{
-    padding-bottom: .8rem;
-  }
+    p{
+      padding-bottom: .8rem;
+    }
 
-  >.containerOne{
-    display: flex;
-    flex-direction: row;
-    gap: 2.8rem;
+    >.containerOne{
+      display: flex;
+      flex-direction: row;
+      gap: 2.8rem;
 
       .inputSnack{
         div{
@@ -146,11 +146,11 @@ export const MainDesktop = styled.main`
           padding: 1.5rem 1rem;
         }
       }
-  }
+    }
 
-  .containerTwo{
-    display: flex;
-    gap: 2.8rem;
+    .containerTwo{
+      display: flex;
+      gap: 2.8rem;
 
       >div{
         .containerTags{
@@ -164,17 +164,17 @@ export const MainDesktop = styled.main`
       }
 
       .inputPrice{
-          width: 30%;
+        width: 30%;
 
-          div{
-            padding: 1.6rem 1rem;
-          }
+        div{
+          padding: 1.6rem 1rem;
+        }
       }
-  }
+    }
 
-  .containerButtons {
-    width:22%;
-    float: right;
+    .containerButtons {
+      width:22%;
+      float: right;
+    }
   }
-}
 `
