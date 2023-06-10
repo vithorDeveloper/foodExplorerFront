@@ -1,6 +1,8 @@
 import { Container } from "./styles";
+import { Link } from 'react-router-dom'
 
-import { Input } from "../../input";
+
+import { Input } from "../../responsive/input";
 import { SignOut, ShoppingCart, MagnifyingGlass } from "@phosphor-icons/react"
 
 import logo from "../../../assets/brand2.png"
@@ -25,7 +27,9 @@ export function HeaderDesktop({title}){
         <span>Pedidos <span>(0)</span></span>
       </div>
 
-      <SignOut size={28} />
+      <Link to="/login">
+          <SignOut size={28} color="black"/>
+      </Link>
     </Container>
   )
 }

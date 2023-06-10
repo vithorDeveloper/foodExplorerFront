@@ -1,15 +1,16 @@
 import { Container, SectionMobile, SectionDesktop } from "./styles";
 
-import { HeaderMobile } from "../../components/mobile/headerClient"
-import { HeaderDesktop} from "../../components/desktop/headerClient"
-import { FooterDesktop } from "../../components/desktop/footer";
-import { FooterMobile } from "../../components/mobile/footer";
-import { Button } from "../../components/button";
-import { Tags } from "../../components/ingredientTags";
-import { TextButton } from "../../components/textButton";
+import { HeaderMobile } from "../../../components/mobile/headerClient"
+import { HeaderDesktop} from "../../../components/desktop/headerClient"
+import { FooterDesktop } from "../../../components/desktop/footer";
+import { FooterMobile } from "../../../components/mobile/footer";
+import { Button } from "../../../components/responsive/button";
+import { Tags } from "../../../components/responsive/tagIngredient";
+import { Link } from 'react-router-dom'
+import { TextButton } from "../../../components/responsive/textButton";
 import { FaMinus, FaPlus, FaShoppingCart, FaChevronLeft } from "react-icons/fa"
 
-import prato from "../../assets/salada.svg"
+import prato from "../../../assets/salada.svg"
 
 export function DishDetailsClient(){
   return(
@@ -18,7 +19,9 @@ export function DishDetailsClient(){
       <HeaderMobile />
       <HeaderDesktop />
 
-      <TextButton title="voltar" icon={FaChevronLeft}/>
+      <Link to="/">
+        <TextButton title="voltar" icon={FaChevronLeft}/>
+      </Link>
 
     <SectionMobile>
 

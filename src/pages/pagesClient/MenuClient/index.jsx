@@ -1,10 +1,9 @@
 import { Container } from "./styles";
-import { Input } from "../../components/input"
-import { FooterMobile } from "../../components/mobile/footer";
-import { FooterDesktop } from "../../components/desktop/footer";
+import { Input } from "../../../components/responsive/input"
+import { FooterMobile } from "../../../components/mobile/footer";
 import { RiCloseFill, RiSearchLine } from 'react-icons/ri'
 
-export function MenuAdm(){
+export function MenuClient(){
   return(
     <Container>
         <header>
@@ -16,12 +15,11 @@ export function MenuAdm(){
           <Input icon={RiSearchLine} placeholder="Busque por pratos ou ingredientes"/>
 
         <div>
-          <a href="#">Novo prato</a>
           <a href="#">Sair</a>
         </div>
         </section>
         
-      <FooterMobile />
+        <FooterMobile />
     </Container>
   )
 }

@@ -1,13 +1,14 @@
 import { Container, Form, TextArea, MainMobile, MainDesktop } from "./styles";
 
-import { Input } from "../../components/input";
-import { Button } from "../../components/button";
-import { HeaderMobile } from "../../components/mobile/headerAdm"
-import { HeaderDesktop} from "../../components/desktop/headerAdm"
-import { FooterMobile } from "../../components/mobile/footer";
-import { FooterDesktop } from "../../components/desktop/footer";
-import { NewIngredient } from "../../components/NewIngredient";
-import { TextButton } from "../../components/textButton";
+import { Input } from "../../../components/responsive/input";
+import { Button } from "../../../components/responsive/button";
+import { HeaderMobile } from "../../../components/mobile/headerAdm"
+import { HeaderDesktop} from "../../../components/desktop/headerAdm"
+import { FooterMobile } from "../../../components/mobile/footer";
+import { FooterDesktop } from "../../../components/desktop/footer";
+import { NewIngredient } from "../../../components/responsive/newIngredient";
+import { TextButton } from "../../../components/responsive/textButton";
+import { Link } from "react-router-dom"
 
 import { FaChevronLeft, FaDownload, FaAngleDown} from "react-icons/fa"
 
@@ -19,10 +20,12 @@ export function EditDish(){
     <HeaderDesktop title={"admin"}/>
 
     <MainMobile>
-      <TextButton 
+      <Link to="/">
+        <TextButton 
           icon={FaChevronLeft}
           title={"voltar"}
         />
+      </Link>
 
       <Form>
         <h1>Editar prato</h1>
@@ -88,10 +91,12 @@ export function EditDish(){
     <MainDesktop>
 
       <Form>
-      <TextButton 
+      <Link to="/">
+        <TextButton 
           icon={FaChevronLeft}
           title={"voltar"}
-      />
+        />
+      </Link>
         <h1>Editar prato</h1>
 
         <div className="containerOne">

@@ -4,6 +4,6 @@ export const Container = styled.a`
     display: flex;
     align-items: center;
     
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: ${({theme}) => theme.colors.brown};
 `

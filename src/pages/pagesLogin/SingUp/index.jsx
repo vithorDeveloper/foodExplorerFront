@@ -1,9 +1,10 @@
-import logo from '../../assets/brand2.png'
+import logo from '../../../assets/brand2.png'
 
 import { Container} from './styles'
-import { Input } from '../../components/input'
-import { Button } from '../../components/button'
-import { TextButton } from '../../components/textButton'
+import { Link } from 'react-router-dom'
+import { Input } from '../../../components/responsive/input'
+import { Button } from '../../../components/responsive/button'
+import { TextButton } from '../../../components/responsive/textButton'
 
 export function SingUp() {
 
@@ -33,9 +34,11 @@ export function SingUp() {
           <Input type="password" placeholder="No mínimo 6 caracteres" />
         </div>
         
-        <Button title='Criar conta' />
+          <Button title='Criar conta' />
 
+        <Link to="/">
         <TextButton href="/src/page/SingIn" title='Já tenho uma conta'/>
+        </Link>
 
       </form>
       

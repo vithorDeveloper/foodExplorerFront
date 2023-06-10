@@ -1,6 +1,7 @@
-import { Button } from "../../button";
+import { Button } from "../../responsive/button";
 import { Container } from "./styles";
 import { FaMinus, FaPlus, FaAngleRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 import prato from '../../../assets/salada.svg'
 
@@ -9,18 +10,18 @@ export function DishCardMobile({icon: Icon, title, price, quant, description, ..
     <Container
       {...rest}
     >
-      <button className="heartButton">
+      <Link to="/edit" className="heartButton">
         {Icon && <Icon size={24} />}
-      </button>
+      </Link>
 
       <div className="containerImg">
         <img src={prato} alt="" />
 
-        <a href="#">
+        <Link to="/details">
           {title} 
           <span><FaAngleRight /></span>
           <p>{description}</p>
-        </a>
+        </Link>
 
         <p>{price}</p>
       </div>

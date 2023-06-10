@@ -1,9 +1,10 @@
-import logo from '../../assets/brand2.png'
+import logo from '../../../assets/brand2.png'
 
 import { Container} from './styles'
-import { Input } from '../../components/input'
-import { Button } from '../../components/button'
-import { TextButton } from '../../components/textButton'
+import { Link } from 'react-router-dom'
+import { Input } from '../../../components/responsive/input'
+import { Button } from '../../../components/responsive/button'
+import { TextButton } from '../../../components/responsive/textButton'
 
 export function SingIn() {
 
@@ -31,7 +32,9 @@ export function SingIn() {
 
         <Button title='Entrar' />
 
+        <Link to="/register">
         <TextButton href="/src/page/SingUp" title='Criar nova conta'/>
+        </Link>
 
       </form>
       

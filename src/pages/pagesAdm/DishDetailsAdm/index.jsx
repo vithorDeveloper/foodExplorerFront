@@ -1,15 +1,16 @@
 import { Container, SectionMobile, SectionDesktop } from "./styles";
 
-import { HeaderMobile } from "../../components/mobile/headerAdm"
-import { HeaderDesktop} from "../../components/desktop/headerAdm"
-import { FooterMobile } from "../../components/mobile/footer";
-import { FooterDesktop } from "../../components/desktop/footer";
-import { Button } from "../../components/button";
-import { Tags } from "../../components/ingredientTags";
-import { TextButton } from "../../components/textButton";
+import { HeaderMobile } from "../../../components/mobile/headerClient"
+import { HeaderDesktop} from "../../../components/desktop/headerClient"
+import { FooterDesktop } from "../../../components/desktop/footer";
+import { FooterMobile } from "../../../components/mobile/footer";
+import { Button } from "../../../components/responsive/button";
+import { Tags } from "../../../components/responsive/tagIngredient";
+import { TextButton } from "../../../components/responsive/textButton";
 import { FaChevronLeft } from "react-icons/fa"
 
-import prato from "../../assets/salada.svg"
+import prato from "../../../assets/salada.svg"
+import { Link } from "react-router-dom";
 
 export function DishDetailsAdm(){
   return(
@@ -18,7 +19,9 @@ export function DishDetailsAdm(){
       <HeaderMobile title={"admin"}/>
       <HeaderDesktop title={"admin"}/>
 
-      <TextButton title="voltar" icon={FaChevronLeft}/>
+      <Link to="/">
+          <TextButton title="voltar" icon={FaChevronLeft}/>
+      </Link>
 
       <SectionMobile>
 
@@ -39,9 +42,9 @@ export function DishDetailsAdm(){
           <Tags title="tomate"/>
         </div>
 
-        <div className="containerButton">
-          <Button title="Editar prato"/>
-        </div>
+        <Link to="/edit" className="containerButton">
+            <Button title="Editar prato"/>
+        </Link>
 
       </SectionMobile>
         <FooterMobile />
@@ -68,9 +71,9 @@ export function DishDetailsAdm(){
             <Tags title="tomate"/>
           </div>
 
-          <div className="containerButton">
+          <Link to="/edit" className="containerButton">
             <Button title="Editar prato"/>
-          </div>
+          </Link>
         </div>
 
       </SectionDesktop>

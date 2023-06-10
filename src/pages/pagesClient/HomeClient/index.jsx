@@ -1,11 +1,13 @@
 import { Container } from "./styles";
-import { FooterMobile } from "../../components/mobile/footer";
-import { FooterDesktop } from "../../components/desktop/footer";
-import { HeaderMobile } from "../../components/mobile/headerClient"
-import { HeaderDesktop} from "../../components/desktop/headerClient"
-import { DishCardMobile } from "../../components/mobile/dishCardClient"
-import { DishCardDesktop } from "../../components/desktop/dishCardClient"
-import assets from "../../assets/pngegg 2.svg"
+import { Link } from 'react-router-dom'
+
+import { FooterMobile } from "../../../components/mobile/footer";
+import { FooterDesktop } from "../../../components/desktop/footer";
+import { HeaderMobile } from "../../../components/mobile/headerClient"
+import { HeaderDesktop} from "../../../components/desktop/headerClient"
+import { DishCardMobile } from "../../../components/mobile/dishCardClient"
+import { DishCardDesktop } from "../../../components/desktop/dishCardClient"
+import assets from "../../../assets/pngegg 2.svg"
 import { FaRegHeart } from 'react-icons/fa'
 
 

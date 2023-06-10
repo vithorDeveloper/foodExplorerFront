@@ -1,15 +1,16 @@
 import { Container, Form, TextArea, MainMobile, MainDesktop } from "./styles";
 
-import { Input } from "../../components/input";
-import { Button } from "../../components/button";
-import { HeaderMobile } from "../../components/mobile/headerAdm"
-import { HeaderDesktop} from "../../components/desktop/headerAdm"
-import { FooterMobile } from "../../components/mobile/footer";
-import { FooterDesktop } from "../../components/desktop/footer";
-import { NewIngredient } from "../../components/NewIngredient";
-import { TextButton } from "../../components/textButton";
+import { Input } from "../../../components/responsive/input";
+import { Button } from "../../../components/responsive/button";
+import { HeaderMobile } from "../../../components/mobile/headerAdm"
+import { HeaderDesktop} from "../../../components/desktop/headerAdm"
+import { FooterMobile } from "../../../components/mobile/footer";
+import { FooterDesktop } from "../../../components/desktop/footer";
+import { NewIngredient } from "../../../components/responsive/NewIngredient";
+import { TextButton } from "../../../components/responsive/textButton";
 
 import { FaChevronLeft, FaDownload, FaAngleDown} from "react-icons/fa"
+import { Link } from "react-router-dom";
 
 export function NewDish(){
   return(
@@ -19,10 +20,12 @@ export function NewDish(){
       <HeaderDesktop title={"admin"}/>
 
       <MainMobile>
-    <TextButton 
-        icon={FaChevronLeft}
-        title={"voltar"}
-      />
+        <Link to="/">
+          <TextButton 
+          icon={FaChevronLeft}
+          title={"voltar"}
+          />
+        </Link>
 
     <Form>
       <h1>Novo prato</h1>
@@ -84,10 +87,12 @@ export function NewDish(){
       <MainDesktop>
 
         <Form>
-        <TextButton 
-            icon={FaChevronLeft}
-            title={"voltar"}
-        />
+        <Link to="/">
+          <TextButton 
+          icon={FaChevronLeft}
+          title={"voltar"}
+          />
+        </Link>
           <h1>Novo prato</h1>
 
           <div className="containerOne">

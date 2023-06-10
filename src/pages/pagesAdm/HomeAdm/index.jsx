@@ -1,12 +1,13 @@
 import { Container } from "./styles";
-import { FooterMobile } from "../../components/mobile/footer";
-import { FooterDesktop } from "../../components/desktop/footer";
-import { HeaderMobile } from "../../components/mobile/headerAdm"
-import { HeaderDesktop} from "../../components/desktop/headerAdm"
-import { DishCardMobile } from "../../components/mobile/dishCardAdm"
-import { DishCardDesktop } from "../../components/desktop/dishCardAdm"
-import assets from "../../assets/pngegg 2.svg"
+import { FooterMobile } from "../../../components/mobile/footer";
+import { FooterDesktop } from "../../../components/desktop/footer";
+import { HeaderMobile } from "../../../components/mobile/headerAdm"
+import { HeaderDesktop} from "../../../components/desktop/headerAdm"
+import { DishCardMobile } from "../../../components/mobile/dishCardAdm"
+import { DishCardDesktop } from "../../../components/desktop/dishCardAdm"
+import assets from "../../../assets/pngegg 2.svg"
 import { FaPen } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export function HomeAdm(){
   return(

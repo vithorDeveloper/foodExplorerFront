@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background from "../../assets/fondo.png";
 
 export const Container = styled.div`
     color: ${({ theme }) => theme.colors.brown};
@@ -9,7 +8,7 @@ export const Container = styled.div`
 
     height: 100vh;
 
-    padding: 9rem 4.7rem;
+    padding: 10rem 4.7rem;
 
     text-align: center;
 
@@ -20,7 +19,7 @@ export const Container = styled.div`
 
       gap: 1rem;
 
-      padding-bottom: 5rem;
+      padding-bottom: 7rem;
       
       >h1{
       font-size: 4rem;
@@ -36,12 +35,13 @@ export const Container = styled.div`
     >form{
       text-align: left;
 
-      >div{
-        margin: 0.8rem 0 3.2rem;
-      }
-
       >h1{
         display: none;
+      }
+
+      >div{
+        
+      margin: 0.8rem 0 3.2rem;
       }
 
       >a{
@@ -51,6 +51,8 @@ export const Container = styled.div`
         padding-top: 3.6rem;
 
         font-weight: bold;
+
+        font-size: .5rem;
       }
 
       p{
@@ -66,20 +68,28 @@ export const Container = styled.div`
     gap: 4rem;
 
     >a{
+      border: 0.1rem solid ${({ theme }) => theme.colors.brown};
+      border-radius: 0.8rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0;
+
       position: relative;
-      right: -50%;
+      bottom: -30%;
     }
 
     >button{
       height: 5rem;
       
       position: relative;
-      bottom: -22%;
+      bottom: -30%;
     }
 
     >div{
       margin: 0;
-
       >input{
       margin-bottom: 0;
       }
@@ -123,6 +133,8 @@ export const Container = styled.div`
       left: 0;
 
       padding: 0;
+
+      border: none;
     }
 
     >div{
@@ -130,4 +142,4 @@ export const Container = styled.div`
     }
   }
 }
-`
+    `

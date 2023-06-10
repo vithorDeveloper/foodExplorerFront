@@ -1,8 +1,8 @@
 import { Container } from "./styles";
-
-import { Input } from "../../input";
+import { Input } from "../../responsive/input";
 import { SignOut, MagnifyingGlass } from "@phosphor-icons/react"
 import logo from "../../../assets/brand2.png"
+import { Link } from "react-router-dom";
 
 export function HeaderDesktop({title}){
   return(
@@ -22,11 +22,13 @@ export function HeaderDesktop({title}){
           icon={MagnifyingGlass}
         />
 
-      <div className="containerIcon">
+      <Link to="/new" className="containerIcon">
         <span>Novo prato</span>
-      </div>
+      </Link>
 
-      <SignOut size={28} />
+      <Link to="/login">
+          <SignOut size={28} color="black"/>
+      </Link>
     </Container>
   )
 }
