@@ -32,10 +32,6 @@ export const Container = styled.div`
       }
     }
 
-    >form{
-      
-    }
-
 @media screen and (min-width: 1024px){
   display: flex;
   justify-content: center;
@@ -71,7 +67,7 @@ export const Form = styled.form`
 
     font-weight: bold;
 
-    font-size: .5rem;
+    font-size: 1.2;
   }
 
   p{

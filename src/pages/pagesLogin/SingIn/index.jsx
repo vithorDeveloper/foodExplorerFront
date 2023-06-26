@@ -1,13 +1,22 @@
 import { Container, Form} from './styles'
-
+import { useState } from 'react'
+import { useAuth } from '../../../hooks/authContext'
 import { Link } from 'react-router-dom'
 import { Input } from '../../../components/responsive/input'
 import { Button } from '../../../components/responsive/button'
-import { TextButton } from '../../../components/responsive/textButton'
 
 import logo from '../../../assets/brand2.png'
 
 export function SingIn() {
+
+  const { singIn } = useAuth()
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  function handleSingIn(){
+    singIn({email, password})
+  }
 
   return (
     <Container>
@@ -23,18 +32,22 @@ export function SingIn() {
         
         <div>
           <p>Email</p>
-            <Input type="email" placeholder="Exemplo: exemplo@exemplo.com.br" />
+            <Input type="email" placeholder="Exemplo: exemplo@exemplo.com.br" 
+            onChange={e => setEmail(e.target.value)}
+            />
         </div>
         
         <div>
           <p>Senha</p>
-            <Input type="password" placeholder="No mínimo 6 caracteres" />
+            <Input type="password" placeholder="No mínimo 6 caracteres" 
+            onChange={e => setPassword(e.target.value)}
+            />
         </div>
 
-        <Button title='Entrar' />
+        <Button title='Entrar' onClick={handleSingIn}/>
 
         <Link to="/register">
-          <TextButton href="/src/page/SingUp" title='Criar nova conta'/>
+        Criar nova conta
         </Link>
 
       </Form>
