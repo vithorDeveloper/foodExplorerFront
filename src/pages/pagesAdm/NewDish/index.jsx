@@ -31,6 +31,7 @@ export function NewDish(){
 
   function handleAddIngredient(){
     setIngredients(prevState => [...prevState, newIngredient ])
+    setNewIngredient("")
 }
 
 function handleRemoveIngredient(deleted){
@@ -51,10 +52,15 @@ async function handleAddDishes(){
   formData.append("ingredients", ingredients)
   formData.append("image", image)
 
-  await api.post('/dishes', formData)
+  try {
+    await api.post('/dishes', formData)
 
-  alert("Opa!, mais um prato cadastrado")
-  navigate(-1)
+    alert("Opa!, mais um prato cadastrado")
+    navigate(-1)
+
+  } catch (error) {
+    return console.error(error)
+  }
 }
 
   return(
@@ -82,6 +88,7 @@ async function handleAddDishes(){
                 <input 
                 type="file" 
                 id="avatar"
+                onChange={e => setImage(e.target.files[0])}
                 />
 
             </label>
