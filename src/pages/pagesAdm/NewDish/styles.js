@@ -77,6 +77,22 @@ export const TextArea = styled.textarea`
 export const Form = styled.form`
   padding: 2.4rem 0 5.3rem;
 
+  select{
+    width: 100%;
+
+    border-radius: 0.5rem;
+
+    padding: 1.2rem;
+    margin-bottom: 2.4rem;
+
+    border: none;
+
+    background-color: #9D978E;
+    color: ${({ theme }) => theme.colors.brown};
+
+    outline: none;
+  }
+
   >h1{
     padding-bottom: 2rem;
   }
@@ -102,6 +118,36 @@ export const Form = styled.form`
     background-color: #9D978E;
     padding-top: 1rem;
     border-radius: .5rem;
+  }
+
+  .photoDish{
+    label{
+    width: 100%;
+
+    display: flex;
+
+    gap: 1rem;
+
+    border-radius: 0.5rem;
+
+    padding: 1.2rem;
+    margin-bottom: 2.4rem;
+
+    background-color: #9D978E;
+    color: ${({ theme }) => theme.colors.brown};
+
+    font-size: 1.4rem;
+
+    >input{
+        background: transparent;
+        width: 100%;
+        display: none;
+
+        ::placeholder{
+            color: ${({ theme }) => theme.colors.brown};
+        }
+    }
+  }
   }
 `
 
@@ -134,6 +180,34 @@ export const MainDesktop = styled.main`
       flex-direction: row;
       gap: 2.8rem;
 
+      label{
+      width: 100%;
+
+      display: flex;
+
+      gap: 1rem;
+
+      border-radius: 0.5rem;
+
+      padding: 1.2rem;
+      margin-bottom: 2.4rem;
+
+      background-color: #9D978E;
+      color: ${({ theme }) => theme.colors.brown};
+
+      font-size: 1.4rem;
+
+      >input{
+          background: transparent;
+          width: 100%;
+          display: none;
+
+          ::placeholder{
+              color: ${({ theme }) => theme.colors.brown};
+          }
+      }
+  }
+
       .inputSnack{
         div{
           display: flex;
@@ -160,7 +234,12 @@ export const MainDesktop = styled.main`
           background-color: #9D978E;
           padding: .8rem .6rem 0 0;
           border-radius: .5rem;
+
+          div{
+            width: 20%;
+          }
         }
+
       }
 
       .inputPrice{

@@ -21,11 +21,15 @@ export function SingUp() {
       alert("preencha todos os campos")
     }
 
+    if(password.length < 6){
+      return alert("Senha muito curta (mìnimo 6 caracteres!)")
+    }
+
     api.post("/users", {name, email, password})
     .then(() => {
       alert("usuario cadastrado")
-      navigate("/")
     })
+      navigate(-1)
     .catch(error => {
       if(error.response){
         alert(error.response.data.message)

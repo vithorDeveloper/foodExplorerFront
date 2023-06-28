@@ -45,8 +45,6 @@ export const Container = styled.div`
         }
     }
 
-
-
 @media (min-width: 768px){
 
     >div:first-child,
@@ -109,7 +107,6 @@ export const Container = styled.div`
 `
 
 export const Section = styled.section`
-    >section{
         padding: 0 0 2.5rem 1.6rem;
 
         >h2{
@@ -118,22 +115,10 @@ export const Section = styled.section`
         }
 
         >div{
-            >.dishMobile,
-            >.dishDesktop{
-            display: flex;
-            overflow-x: auto;
-            ::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
-
-            width: 100%;
-            }
-        }
-
             >.dishDesktop{
             display: none;
             }
         }
-    }
 
     @media (min-width: 768px){
         padding-left: 4rem;

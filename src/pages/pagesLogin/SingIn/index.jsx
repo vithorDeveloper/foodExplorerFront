@@ -8,11 +8,10 @@ import { Button } from '../../../components/responsive/button'
 import logo from '../../../assets/brand2.png'
 
 export function SingIn() {
-
-  const { singIn } = useAuth()
-
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+
+  const { singIn } = useAuth()
 
   function handleSingIn(){
     singIn({email, password})
@@ -46,9 +45,7 @@ export function SingIn() {
 
         <Button title='Entrar' onClick={handleSingIn}/>
 
-        <Link to="/register">
-        Criar nova conta
-        </Link>
+        <Link to="/register">Criar nova conta</Link>
 
       </Form>
       

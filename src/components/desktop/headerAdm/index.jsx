@@ -2,9 +2,24 @@ import { Container } from "./styles";
 import { Input } from "../../responsive/input";
 import { SignOut, MagnifyingGlass } from "@phosphor-icons/react"
 import logo from "../../../assets/brand2.png"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import { useAuth } from "../../../hooks/authContext";
+
 
 export function HeaderDesktop({title}){
+  const {signOut} = useAuth()
+  const navigate = useNavigate()
+
+  function handleSingOut(){
+    const wantToLeave = window.confirm("Quer mesmo sair ?")
+
+    if(wantToLeave){
+      navigate(-1)
+      signOut()
+    }
+  }
+
   return(
     <Container>
 
@@ -27,7 +42,7 @@ export function HeaderDesktop({title}){
       </Link>
 
       <Link to="/login">
-          <SignOut size={28} color="black"/>
+          <SignOut size={28} color="black" onClick={handleSingOut}/>
       </Link>
     </Container>
   )

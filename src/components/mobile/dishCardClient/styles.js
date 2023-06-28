@@ -8,6 +8,8 @@ export const Container = styled.div`
 
     text-align: center;
 
+    width: 20rem;
+
     flex: 0 0 auto;
 
     background: rgba(255, 255, 255, 0.25);

@@ -32,6 +32,7 @@ export const Container = styled.div`
 
     >.containerImg{
       font-size: 2.2rem;
+      cursor: pointer;
 
       >img{
         width: 17rem;
