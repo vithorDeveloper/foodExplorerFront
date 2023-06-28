@@ -25,7 +25,7 @@ export function NewDish(){
   const [ingredients, setIngredients] = useState([])
   const [newIngredient, setNewIngredient] = useState("")
 
-  // const [image, setImage] = useState(null)
+  const [image, setImage] = useState(null)
 
   const navigate = useNavigate()
 
@@ -38,18 +38,20 @@ function handleRemoveIngredient(deleted){
 }
 
 async function handleAddDishes(){
+  const formData = new FormData();
 
   if(!title || !price || !description || !category){
     return alert("Preencha todos os campos para criar o prato.")
   }
 
-  await api.post('/dishes', {
-    title,
-    price,
-    category,
-    description,
-    ingredients
-  })
+  formData.append("title", title)
+  formData.append("price", price)
+  formData.append("category", category)
+  formData.append("description", description)
+  formData.append("ingredients", ingredients)
+  formData.append("image", image)
+
+  await api.post('/dishes', formData)
 
   alert("Opa!, mais um prato cadastrado")
   navigate(-1)
@@ -166,6 +168,7 @@ async function handleAddDishes(){
                   <input 
                   type="file" 
                   id="avatar"
+                  onChange={e => setImage(e.target.files[0])}
                   />
                 </label>
             </div>
