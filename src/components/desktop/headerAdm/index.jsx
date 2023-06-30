@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../../hooks/authContext";
 
 
-export function HeaderDesktop({title}){
+export function HeaderDesktop({onChange, title}){
   const {signOut} = useAuth()
   const navigate = useNavigate()
 
@@ -35,6 +35,7 @@ export function HeaderDesktop({title}){
         <Input
           placeholder={"Busque por pratos ou ingredientes"}
           icon={MagnifyingGlass}
+          onChange={onChange}
         />
 
       <Link to="/new" className="containerIcon">

@@ -2,6 +2,7 @@ import { Container } from "./styles";
 import { ShoppingCart, List} from "@phosphor-icons/react"
 import { useNavigate } from "react-router-dom"
 
+import { useAuth } from "../../../hooks/authContext";
 
 import logo from "../../../assets/brand2.png"
 

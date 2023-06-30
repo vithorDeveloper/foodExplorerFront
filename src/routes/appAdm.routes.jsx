@@ -12,8 +12,8 @@ export function AppAdmRoutes(){
         <Route path="/" element={<HomeAdm/>} />
         <Route path="/new" element={<NewDish/>} />
         <Route path="/menu" element={<MenuAdm/>} />
-        <Route path="/edit" element={<EditDish/>} />
-        <Route path="/details" element={<DishDetailsAdm/>} />
+        <Route path="/edit/:id" element={<EditDish/>} />
+        <Route path="/details/:id" element={<DishDetailsAdm/>} />
       </Routes>
     )
 }

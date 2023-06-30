@@ -5,7 +5,6 @@ import logo from "../../../assets/brand2.png"
 
 import { useAuth } from "../../../hooks/authContext";
 
-
 export function HeaderMobile({title}){
   const {signOut} = useAuth()
   const navigate = useNavigate()
@@ -21,7 +20,9 @@ export function HeaderMobile({title}){
 
   return(
     <Container>
-      <FaBars size={24}/>
+      <FaBars size={24}
+      onClick={handleSingOut}
+      />
 
       <div>
         <img src={logo} alt="" />

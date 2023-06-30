@@ -41,8 +41,12 @@ function handleRemoveIngredient(deleted){
 async function handleAddDishes(){
   const formData = new FormData();
 
-  if(!title || !price || !description || !category){
+  if(!title || !price || !description || !category ){
     return alert("Preencha todos os campos para criar o prato.")
+  }
+
+  if(newIngredient){
+    alert("Ainda existe ingrediente para ser adicionado!")
   }
 
   formData.append("title", title)

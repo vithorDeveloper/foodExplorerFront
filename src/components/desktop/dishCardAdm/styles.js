@@ -42,6 +42,8 @@ export const Container = styled.div`
         padding-bottom: 1rem;
         color: ${({ theme }) => theme.colors.brown};
 
+        max-width: 20rem;
+
         >span{
           position: relative;
           top: .4rem;

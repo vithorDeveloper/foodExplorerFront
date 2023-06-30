@@ -74,7 +74,7 @@ export const TextArea = styled.textarea`
 export const Form = styled.form`
     padding: 2.4rem 0 5.3rem;
 
-    >h1{
+      >h1{
       padding-bottom: 2rem;
     }
 
@@ -109,6 +109,36 @@ export const Form = styled.form`
         background-color: #9D978E;
       }
     }
+
+    .imageDish{
+        >label{
+          width: 100%;
+
+          display: flex;
+
+          gap: 1rem;
+
+          border-radius: 0.5rem;
+
+          padding: 1.2rem;
+          margin-bottom: 2.4rem;
+
+          background-color: #9D978E;
+          color: ${({ theme }) => theme.colors.brown};
+
+          font-size: 1.4rem;
+
+          >input{
+              background: transparent;
+              width: 100%;
+              display: none;
+
+              ::placeholder{
+                  color: ${({ theme }) => theme.colors.brown};
+              }
+          }
+        }
+      }
 `
 
 export const MainMobile = styled.main`
@@ -129,58 +159,84 @@ export const MainDesktop = styled.main`
 
     div{
       width: 100%;
-    }
 
-    p{
-      padding-bottom: .8rem;
-    }
+      p{
+        padding-bottom: .8rem;
+      }
 
-    >.containerOne{
-      display: flex;
-      flex-direction: row;
-      gap: 2.8rem;
+      select{
+        width: 100%;
 
-      .inputSnack{
-        div{
+        border-radius: 0.5rem;
+
+        padding: 1.2rem;
+        margin-bottom: 2.4rem;
+
+        border: none;
+
+        background-color: #9D978E;
+        color: ${({ theme }) => theme.colors.brown};
+
+        outline: none;
+      }
+
+      >.containerOne{
+        display: flex;
+        flex-direction: row;
+        gap: 2.8rem;
+
+        .inputSnack{
+          div{
+            display: flex;
+            flex-direction: row-reverse;
+          }
+        }
+
+        .inputName{
+          div{
+            padding: 1.5rem 1rem;
+          }
+        }
+      }
+
+      .containerTwo{
+        display: flex;
+        gap: 2.8rem;
+
+        >div{
+          .containerTags{
+            display: flex;
+            flex-direction: row;
+
+            background-color: #9D978E;
+            padding: .8rem .6rem 0 0;
+            border-radius: .5rem;
+
+            div{
+              width: 20%;
+            }
+          }
+        }
+
+        .inputPrice{
+          width: 30%;
+
+          div{
+            padding: 1.6rem 1rem;
+          }
+        }
+      }
+
+        .containerButtons {
+          width:54%;
+          float: right;
           display: flex;
-          flex-direction: row-reverse;
+          gap: 2rem;
+
+          button:first-child {
+            background-color: #9D978E;
+          }
         }
-      }
-
-      .inputName{
-        div{
-          padding: 1.5rem 1rem;
-        }
-      }
-    }
-
-    .containerTwo{
-      display: flex;
-      gap: 2.8rem;
-
-      >div{
-        .containerTags{
-          display: flex;
-          flex-direction: row;
-
-          background-color: #9D978E;
-          padding: .8rem .6rem 0 0;
-          border-radius: .5rem;
-        }
-      }
-
-      .inputPrice{
-        width: 30%;
-
-        div{
-          padding: 1.6rem 1rem;
-        }
-      }
-    }
-
-    .containerButtons {
-      width:54%;
-      float: right;
     }
   }
 `

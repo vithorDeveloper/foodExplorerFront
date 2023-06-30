@@ -8,13 +8,29 @@ import { HeaderDesktop} from "../../../components/desktop/headerAdm"
 import { DishCardMobile } from "../../../components/mobile/dishCardAdm"
 import { DishCardDesktop } from "../../../components/desktop/dishCardAdm"
 
+import { useEffect, useState } from "react"
+
+import { api } from "../../../services/api"
+
 import assets from "../../../assets/pngegg 2.svg"
 
 export function HomeAdm(){
+  const [search, setSearch] = useState("");
+  const [dishes, setDishes] = useState([]);
+
+  useEffect(() => {
+    async function searchDishes() {
+      const response = await api.get(`/dishes?title=${search}&ingredients=${search}`);
+      setDishes(response.data);
+    }
+
+    searchDishes();
+  }, [search]);
+
   return(
     <Container>
-      <HeaderMobile title={"admin"}/>
-      <HeaderDesktop title={"admin"}/>
+      <HeaderMobile title={"admin"} onChange={e => setSearch(e.target.value)}/>
+      <HeaderDesktop title={"admin"} onChange={e => setSearch(e.target.value)}/>
 
       <div className="containerMacarrone">
           <img src={assets} alt="" />
@@ -30,45 +46,83 @@ export function HomeAdm(){
           <h2>Refeições</h2>
             <div>
               <div className="dishMobile">
-                <DishCardMobile
-                icon={FaPen}
-                title="Salada Ravanello" 
-                description={"Rabanetes, folhas verdes e molho agridoce salpicados com gergelim."}
-                price={"R$ 45,90"}
-                />
+              {
+                dishes.filter(dish => dish.category === "Refeição").map(dish => (
+                  <DishCardMobile
+                  key={String(dish.id)}
+                  data={dish}
+                  icon={FaPen}
+                  />
+                ))
+              }
               </div>
 
               <div className="dishDesktop">
-                <DishCardDesktop
-                icon={FaPen}
-                title="Salada Ravanello" 
-                description={"Rabanetes, folhas verdes e molho agridoce salpicados com gergelim."}
-                price={"R$ 45,90"}
-                />
+                {
+                    dishes.filter(dish => dish.category === "Refeição").map(dish =>(
+                      <DishCardDesktop
+                        key={String(dish.id)}
+                        data={dish}
+                        icon={FaPen}
+                      />
+                    ))
+                  }
               </div>
             </div>
 
-          <h2>Pratos principais</h2>
+            <h2>Bebidas</h2>
             <div>
               <div className="dishMobile">
-                <DishCardMobile
-                icon={FaPen}
-                title="Salada Ravanello" 
-                description={"Rabanetes, folhas verdes e molho agridoce salpicados com gergelim."}
-                price={"R$ 45,90"}
-                />
+              {
+                dishes.filter(dish => dish.category === "Bebidas").map(dish => (
+                  <DishCardMobile
+                  key={String(dish.id)}
+                  data={dish}
+                  icon={FaPen}
+                  />
+                ))
+              }
               </div>
 
               <div className="dishDesktop">
-                <DishCardDesktop
-                icon={FaPen}
-                title="Salada Ravanello" 
-                description={"Rabanetes, folhas verdes e molho agridoce salpicados com gergelim."}
-                price={"R$ 45,90"}
-                />
+                {
+                    dishes.filter(dish => dish.category === "Bebidas").map(dish =>(
+                      <DishCardDesktop
+                        key={String(dish.id)}
+                        data={dish}
+                        icon={FaPen}
+                      />
+                    ))
+                  }
               </div>
             </div>
 
+            <h2>Sobremesa</h2>
+            <div>
+              <div className="dishMobile">
+              {
+                dishes.filter(dish => dish.category === "Sobremesas").map(dish => (
+                  <DishCardMobile
+                  key={String(dish.id)}
+                  data={dish}
+                  icon={FaPen}
+                  />
+                ))
+              }
+              </div>
+
+              <div className="dishDesktop">
+                {
+                    dishes.filter(dish => dish.category === "Sobremesas").map(dish =>(
+                      <DishCardDesktop
+                        key={String(dish.id)}
+                        data={dish}
+                        icon={FaPen}
+                      />
+                    ))
+                  }
+              </div>
+            </div>
       </Section>
 
       <FooterDesktop />

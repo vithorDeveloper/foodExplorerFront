@@ -1,29 +1,72 @@
 import { Container } from "./styles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaAngleRight } from 'react-icons/fa'
 
-import prato from '../../../assets/salada.svg'
+import { useEffect, useState } from "react";
 
-export function DishCardDesktop({icon: Icon, title, price, quant, description, ...rest}){
+import { api } from "../../../services/api";
+
+export function DishCardDesktop({data, icon: Icon, ...rest}){
+    const navigate = useNavigate()
+
+    const [image, setImage] = useState(null) 
+    const {id} = data
+
+    function handleDishDetails () {
+      navigate(`/details/${id}`);
+  }
+
+  function handleEditDish () {
+      navigate(`/edit/${id}`);
+  }
+  
+
+    useEffect(() => {
+        async function fetchImage(){
+          if(data){
+            setImage(`${api.defaults.baseURL}/files/${data.image}`)
+          }
+        }
+
+        fetchImage()
+    }, [data])
 
   return(
     <Container {...rest}>
 
-      <Link to="/edit" className="heartButton">
-          {Icon && <Icon size={24} />}
-      </Link>
+      {
+        data && 
+        <>
+          <button 
+            to="/edit" 
+            className="heartButton"
+            onClick={handleEditDish}
+          >
+            {Icon && <Icon size={24} /> }
+          </button>
+  
+        <div className="containerImg">
+          <img 
+          src={image} 
+          alt="foto do prato" 
+          />
 
-      <div className="containerImg">
-          <img src={prato} alt="" />
+          <a to="/details" 
+                onClick={handleDishDetails}
+          
+          >
+              {data.title} 
+              <span
+              >
+                <FaAngleRight />
+              </span>
+              <p>{data.description}</p>
+          </a>
 
-          <Link to="/details">
-              {title} 
-              <span><FaAngleRight /></span>
-              <p>{description}</p>
-          </Link>
-
-          <p>{price}</p>
-      </div>
+          <p>{`R$ ${data.price}`}</p>
+        </div>
+        </>
+      }
 
     </Container>
   )

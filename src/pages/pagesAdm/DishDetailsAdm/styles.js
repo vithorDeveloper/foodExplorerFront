@@ -122,10 +122,11 @@ export const SectionMobile = styled.section`
 
 export const SectionDesktop = styled.section`
 @media (min-width: 768px){
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8rem 2rem 0 2rem;
+  >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem 0 2rem;
 
   >.containerDish{
     img{
@@ -176,6 +177,8 @@ export const SectionDesktop = styled.section`
       }
     }
   }
+  }
+
 }
 
 @media (min-width: 1024px){

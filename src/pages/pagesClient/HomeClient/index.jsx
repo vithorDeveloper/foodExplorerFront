@@ -8,13 +8,30 @@ import { HeaderDesktop} from "../../../components/desktop/headerClient"
 import { DishCardMobile } from "../../../components/mobile/dishCardClient"
 import { DishCardDesktop } from "../../../components/desktop/dishCardClient"
 
+import { useEffect, useState } from "react"
+
+import { api } from "../../../services/api"
+
 import assets from "../../../assets/pngegg 2.svg"
 
 export function HomeClient(){
+  const [search, setSearch] = useState("");
+  const [dishes, setDishes] = useState([]);
+
+  useEffect(() => {
+    async function searchDishes() {
+      const response = await api.get(`/dishes?title=${search}&ingredients=${search}`);
+      setDishes(response.data);
+    }
+
+    searchDishes();
+  }, [search]);
+
+
   return(
     <Container>
-      <HeaderMobile />
-      <HeaderDesktop />
+      <HeaderMobile title={"admin"} onChange={e => setSearch(e.target.value)}/>
+      <HeaderDesktop title={"admin"} onChange={e => setSearch(e.target.value)}/>
 
       <div className="containerMacarrone">
         <img src={assets} alt="" />
@@ -28,46 +45,32 @@ export function HomeClient(){
       <Section>
 
         <h2>Refeições</h2>
-          <div>
-            <div className="dishMobile">
-              <DishCardMobile
-                icon={FaRegHeart} 
-                title={"Salada Ravanello"}
-                price={"R$ 45,90"}
-                quant={"01"}
-              />
-            </div>
-                
-            <div className="dishDesktop">    
-              <DishCardDesktop
-                icon={FaRegHeart} 
-                title={"Salada Ravanello"}
-                price={"R$ 45,90"}
-                quant={"01"}
-              />
-            </div>
-          </div>
+        <h2>Refeições</h2>
+            <div>
+              <div className="dishMobile">
+              {
+                dishes.filter(dish => dish.category === "Refeição").map(dish => (
+                  <DishCardMobile
+                  key={String(dish.id)}
+                  data={dish}
+                  icon={FaPen}
+                  />
+                ))
+              }
+              </div>
 
-        <h2>Pratos principais</h2>
-          <div>
-            <div className="dishMobile">
-              <DishCardMobile
-                icon={FaRegHeart} 
-                title={"Salada Ravanello"}
-                price={"R$ 45,90"}
-                quant={"01"}
-              />
+              <div className="dishDesktop">
+                {
+                    dishes.filter(dish => dish.category === "Refeição").map(dish =>(
+                      <DishCardDesktop
+                        key={String(dish.id)}
+                        data={dish}
+                        icon={FaPen}
+                      />
+                    ))
+                  }
+              </div>
             </div>
-                
-            <div className="dishDesktop">    
-              <DishCardDesktop
-                icon={FaRegHeart} 
-                title={"Salada Ravanello"}
-                price={"R$ 45,90"}
-                quant={"01"}
-              />
-            </div>
-          </div>
 
       </Section>
 
