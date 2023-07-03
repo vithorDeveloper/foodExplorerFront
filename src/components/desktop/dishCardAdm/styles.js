@@ -43,7 +43,7 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.colors.brown};
         font-size: 2.4rem;
 
-        max-width: 28rem;
+        max-width: 22rem;
 
         margin: 0 auto;
 

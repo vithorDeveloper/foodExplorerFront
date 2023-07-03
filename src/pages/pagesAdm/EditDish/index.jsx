@@ -37,7 +37,7 @@ export function EditDish(){
       }
       
       const { name } = newIngredient;
-      const newIngredientObj = { id: null, dish_id: null, name: newIngredient }; // Criar objeto com as propriedades esperadas
+      const newIngredientObj = { id: null, dish_id: null, name: newIngredient };
       setIngredients(prevState => [...prevState, newIngredientObj]);
     
       setNewIngredient("")
@@ -85,11 +85,17 @@ export function EditDish(){
       try {
         const response = await api.get(`/dishes/${params.id}`);
         setData(response.data);
-        setImage(response.data?.image || null);
         setTitle(response.data?.title || "");
         setDescription(response.data?.description || "");
         setPrice(response.data?.price || "");
         setCategory(response.data?.category || "");
+  
+        if (typeof response.data?.image === "string") {
+          setImage(response.data?.image || null);
+        } else {
+          setImage(response.data?.image?.filename || null);
+        }
+  
         setIngredients(response.data?.ingredients || []);
       } catch (error) {
         console.error(error);
@@ -97,7 +103,7 @@ export function EditDish(){
     }
   
     fetchData();
-  }, [params.id]);  
+  }, [params.id]);
   
 
   return(
@@ -192,7 +198,7 @@ export function EditDish(){
                         <input 
                         type="file" 
                         id="avatar"
-                        onChange={e => setImage(e.target.files[0])}
+                        onChange={(e) => setImage(e.target.files[0])}
                         />
                       </label>
                   </div>

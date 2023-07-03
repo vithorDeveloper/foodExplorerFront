@@ -37,29 +37,24 @@ export function DishCardDesktop({data, icon: Icon, ...rest}){
       {
         data && 
         <>
-          <button 
-            to="/edit" 
+          <button
             className="heartButton"
             onClick={handleEditDish}
           >
             {Icon && <Icon size={24} /> }
           </button>
   
-        <div className="containerImg">
-          <img 
-          src={image} 
-          alt="foto do prato" 
+          <div className="containerImg">
+            <img 
+            src={image} 
+            alt="foto do prato" 
           />
 
-          <button to="/details" 
-                onClick={handleDishDetails}
-          >
+          <button onClick={handleDishDetails} >
               {data.title} 
-              <span
-              >
-                <FaAngleRight />
-              </span>
+            <span><FaAngleRight /></span>
           </button>
+          
           <p className="descript">{data.description}</p>
 
           <p>{`R$ ${data.price}`}</p>

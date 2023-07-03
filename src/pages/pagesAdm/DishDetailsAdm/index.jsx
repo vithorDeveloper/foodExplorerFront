@@ -26,6 +26,7 @@ export function DishDetailsAdm(){
   function handleDishEdit(){
     navigate(`/edit/${params.id}`)
   }
+  
 
   useEffect(() => {
       async function fetchDishes(){
@@ -53,7 +54,8 @@ export function DishDetailsAdm(){
       <HeaderDesktop title={"admin"}/>
 
       <Link to="/">
-          <TextButton title="voltar" icon={FaChevronLeft}/>
+        {FaChevronLeft()}
+        <span>voltar</span> 
       </Link>
 
       <SectionMobile>
@@ -76,9 +78,10 @@ export function DishDetailsAdm(){
           <Tags title="tomate"/>
         </div>
 
-        <Link to="/edit" className="containerButton">
-            <Button title="Editar prato"/>
-        </Link>
+        <Button 
+          title="Editar prato"
+          onClick={handleDishEdit}
+        />
 
       </SectionMobile>
 
@@ -116,13 +119,13 @@ export function DishDetailsAdm(){
               </div>
 
             }
-
-              <button to="/edit" className="containerButton">
+{/* 
+              <button to="/edit" className="containerButton"> */}
                 <Button 
                 title="Editar prato"
                 onClick={handleDishEdit}
                 />
-              </button>
+              {/* </button> */}
           </div>
 
         </div>

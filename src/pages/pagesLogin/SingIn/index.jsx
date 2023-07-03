@@ -13,7 +13,8 @@ export function SingIn() {
 
   const { singIn } = useAuth()
 
-  function handleSingIn(){
+  function handleSingIn(event){
+    event.preventDefault()
     singIn({email, password})
   }
 
