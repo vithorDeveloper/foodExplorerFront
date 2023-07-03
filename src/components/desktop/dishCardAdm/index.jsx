@@ -51,17 +51,16 @@ export function DishCardDesktop({data, icon: Icon, ...rest}){
           alt="foto do prato" 
           />
 
-          <a to="/details" 
+          <button to="/details" 
                 onClick={handleDishDetails}
-          
           >
               {data.title} 
               <span
               >
                 <FaAngleRight />
               </span>
-              <p>{data.description}</p>
-          </a>
+          </button>
+          <p className="descript">{data.description}</p>
 
           <p>{`R$ ${data.price}`}</p>
         </div>

@@ -81,29 +81,24 @@ export function EditDish(){
   }
 
   useEffect(() => {
-    async function fetchDishes(){
-      const response = await api.get(`/dishes/${params.id}`)
-      setData(response.data);
-      setImage(response.data?.image || null);
-      setTitle(response.data?.title || "");
-      setDescription(response.data?.description || "");
-      setPrice(response.data?.price || "");
-      setCategory(response.data?.category || "");
-      setIngredients(response.data?.ingredients || []);
-    }
-
-    async function fetchDish() {
+    async function fetchData() {
       try {
         const response = await api.get(`/dishes/${params.id}`);
         setData(response.data);
+        setImage(response.data?.image || null);
+        setTitle(response.data?.title || "");
+        setDescription(response.data?.description || "");
+        setPrice(response.data?.price || "");
+        setCategory(response.data?.category || "");
+        setIngredients(response.data?.ingredients || []);
       } catch (error) {
         console.error(error);
       }
     }
-
-    fetchDishes();
-    fetchDish();
-  }, [])
+  
+    fetchData();
+  }, [params.id]);  
+  
 
   return(
     <Container>

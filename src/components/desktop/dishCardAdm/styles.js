@@ -37,19 +37,25 @@ export const Container = styled.div`
         width: 17rem;
       }
 
-      >a{
+      >button{
         display: block;
         padding-bottom: 1rem;
         color: ${({ theme }) => theme.colors.brown};
+        font-size: 2.4rem;
 
-        max-width: 20rem;
+        max-width: 28rem;
+
+        margin: 0 auto;
+
+        background-color: transparent;
 
         >span{
           position: relative;
           top: .4rem;
         }
+      }
 
-        p{
+      .descript{
           padding: 1rem;
           font-size: 1.2rem;
           width: 20rem;
@@ -57,7 +63,6 @@ export const Container = styled.div`
           color: ${({ theme }) => theme.colors.brown};
           
         }
-      }
 
       p{
         color: orangered;
