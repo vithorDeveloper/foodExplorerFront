@@ -26,55 +26,62 @@ export function EditDish(){
   const [category, setCategory] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState("");
+  const [isString, setIsString] = useState(null);
 
   const params = useParams();
+  
+  const names = ingredients.map(({ name }) => name)
 
   function handleAddIngredient(){
-  console.log(newIngredient)
 
       if(!newIngredient || !newIngredient.trim() === ""){
           return alert("Não é possível adicionar campo vazio.")
       }
-      
+
+      if (typeof(image) === 'string') {
+        setIsString(true)
+      }
+
       const { name } = newIngredient;
-      const newIngredientObj = { id: null, dish_id: null, name: newIngredient };
+      const newIngredientObj = { id: null, dish_id: null, name: newIngredient }; // Criar objeto com as propriedades esperadas
       setIngredients(prevState => [...prevState, newIngredientObj]);
-    
+
       setNewIngredient("")
   }
 
   function handleRemoveIngredient(deleted){
-    setIngredients(prevState => prevState.filter(ingredient => ingredient.name !== deleted))
+    setIngredients(prevState => prevState.filter(ingredient => ingredient !== deleted))
   }
 
   async function handleDishDeleted(){
     const condition = window.confirm("Deseja mesmo excluir o prato ?");
 
     if(condition){
-      await api.delete(`/dishes/${params.id}`)
+      await api.delete(`/dishes/${user.id}`)
       navigate("/")
     }
   }
 
   async function handleSaveDish() {
     const formData = new FormData();
-  
+
     if (newIngredient) {
       return alert('Ainda existe ingrediente para ser adicionado');
     }
-  
+
     formData.append('title', title);
     formData.append('category', category);
     formData.append('price', price);
     formData.append('description', description);
-    formData.append('ingredients', JSON.stringify(ingredients.map(ingredient => ingredient.name)));
+    formData.append('ingredients', names);
     formData.append('image', image);
+    formData.append('isString', isString);
 
     try {
       await api.put(`/dishes/${params.id}`, formData);
-  
+
       alert('Prato Atualizado');
-      navigate(-1);
+      navigate("/");
     } catch (error) {
       console.error(error);
     }
@@ -83,25 +90,19 @@ export function EditDish(){
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await api.get(`/dishes/${params.id}`);
+      const response = await api.get(`/dishes/${params.id}`);
         setData(response.data);
+        setImage(response.data?.image || null);
         setTitle(response.data?.title || "");
         setDescription(response.data?.description || "");
         setPrice(response.data?.price || "");
         setCategory(response.data?.category || "");
-  
-        if (typeof response.data?.image === "string") {
-          setImage(response.data?.image || null);
-        } else {
-          setImage(response.data?.image?.filename || null);
-        }
-  
-        setIngredients(response.data?.ingredients || []);
+        setIngredients(response.data.ingredients);
       } catch (error) {
         console.error(error);
       }
     }
-  
+
     fetchData();
   }, [params.id]);
   
@@ -234,7 +235,7 @@ export function EditDish(){
                           <NewIngredient
                             key={String(index)}
                             value={ingredient.name}
-                            onClick={() => handleRemoveIngredient(ingredient.name)}
+                            onClick={() => handleRemoveIngredient(ingredient)}
                             isNew={false}
                           />
                         ))}
