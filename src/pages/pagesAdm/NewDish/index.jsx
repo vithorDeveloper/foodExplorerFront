@@ -9,6 +9,7 @@ import { HeaderMobile } from "../../../components/mobile/headerAdm"
 import { HeaderDesktop} from "../../../components/desktop/headerAdm"
 import { TextButton } from "../../../components/responsive/textButton"
 import { NewIngredient } from "../../../components/responsive/newIngredient"
+import { Menu } from "../../../components/mobile/menu"
 
 import { api } from "../../../services/api";
 import { useAuth } from "../../../hooks/authContext";
@@ -25,7 +26,14 @@ export function NewDish(){
   const [ingredients, setIngredients] = useState([])
   const [newIngredient, setNewIngredient] = useState("")
 
+
   const [image, setImage] = useState(null)
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
 
   const navigate = useNavigate()
 
@@ -70,16 +78,20 @@ async function handleAddDishes(){
   return(
     <Container>
 
-      <HeaderMobile title={"admin"}/>
+      <HeaderMobile title={"admin"} toggleMenu={toggleMenu}/>
       <HeaderDesktop title={"admin"}/>
 
       <MainMobile>
+      {isMenuOpen && <Menu />}
+
+
+        <Form>
         <Link to="/">
           <FaChevronLeft/>  
             voltar
         </Link>
 
-        <Form>
+
           <h1>Novo prato</h1>
 
           <p>Imagem do prato</p>

@@ -11,18 +11,6 @@ export const Container = styled.div`
         display: none;
     }
 
-    >div:first-child{
-      margin-bottom: 1rem;
-      
-      >div{
-        margin: 0 auto;
-      }
-
-      >.iconCar{
-        display: none;
-      }
-    }
-
     >div:last-child{
       position: relative;
     }
@@ -152,7 +140,20 @@ export const Form = styled.form`
 `
 
 export const MainMobile = styled.main`
+
+    form{
     padding: 0 3.2rem;
+
+    >a{
+      font-size: 1.8rem;
+      margin: 2rem 0;
+
+      display: flex;
+      align-items: center;
+
+      color: ${({ theme }) => theme.colors.brown };
+    }
+    }
 `
 
 export const MainDesktop = styled.main`
@@ -162,6 +163,14 @@ export const MainDesktop = styled.main`
 
   >form{
     width: 80%;
+    >a{
+      font-size: 2.4rem;
+      
+      display: flex;
+      align-items: center;
+
+      color: ${({ theme }) => theme.colors.brown };
+    }
 
     h1{
       padding-top: 2.4rem;

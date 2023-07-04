@@ -38,25 +38,32 @@ export const Container = styled.div`
         width: 10rem;
       }
 
-      >a{
+      >button{
         display: block;
         padding-bottom: 1rem;
         color: ${({ theme }) => theme.colors.brown};
-        
+        font-size: 2.4rem;
+
+        max-width: 22rem;
+
+        margin: 0 auto;
+
+        background-color: transparent;
+
         >span{
           position: relative;
           top: .4rem;
         }
+      }
 
-        p{
-          padding-top: 1rem;
+      .descript{
+          padding: 1rem;
           font-size: 1.2rem;
           width: 20rem;
           margin: 0 auto;
           color: ${({ theme }) => theme.colors.brown};
           
         }
-      }
 
       p{
         color: orangered;

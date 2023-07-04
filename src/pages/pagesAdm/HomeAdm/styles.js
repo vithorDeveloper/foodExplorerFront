@@ -19,7 +19,7 @@ export const Container = styled.div`
 
         border-radius: .5rem;
 
-        margin: 0 1.6rem 6.2rem 3.6rem;
+        margin: 4.4rem 1.6rem 6.2rem 3.6rem;
 
         padding-right: 2rem;
 
@@ -43,7 +43,7 @@ export const Container = styled.div`
             font-size: 1.2rem;
         }
     }
-}
+    }
 
     >div:last-child{
         position: relative;
@@ -52,7 +52,8 @@ export const Container = styled.div`
 @media (min-width: 768px){
 
     >div:first-child,
-    >footer:nth-child(6){
+    >footer:nth-child(6),
+    .menuMobile{
         display: none;
     }
 

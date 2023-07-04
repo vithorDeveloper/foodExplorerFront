@@ -2,8 +2,6 @@ import { Container } from "./styles";
 import { Link, useNavigate } from 'react-router-dom'
 import { FaAngleRight } from 'react-icons/fa'
 
-import prato from '../../../assets/salada.svg'
-
 import { useEffect, useState } from "react";
 
 import { api } from "../../../services/api";
@@ -11,60 +9,59 @@ import { api } from "../../../services/api";
 export function DishCardMobile({data, icon: Icon, ...rest}){
   const navigate = useNavigate()
 
-    const [image, setImage] = useState(null) 
-    const {id} = data
+  const [image, setImage] = useState(null) 
+  const {id} = data
 
-    function handleClickImage () {
-      navigate(`/details/${id}`);
-  }
+  function handleDishDetails () {
+    navigate(`/details/${id}`);
+}
 
-  function handleClickEditDish () {
-      navigate(`/edit/${id}`);
-  }
-  
+function handleEditDish () {
+    navigate(`/edit/${id}`);
+}
 
-    useEffect(() => {
-        async function fetchImage(){
-          if(data){
-            setImage(`${api.defaults.baseURL}/files/${data.image}`)
-          }
+
+  useEffect(() => {
+      async function fetchImage(){
+        if(data){
+          setImage(`${api.defaults.baseURL}/files/${data.image}`)
         }
+      }
 
-        fetchImage()
+      fetchImage()
     }, [data])
 
-  return(
-    <Container  {...rest}>
+return(
+  <Container {...rest}>
 
-      {
-        data && 
-        <>
-          <Link 
-            to="/edit" 
-            className="heartButton"
-            onClick={handleClickImage}
-          >
-            {Icon && <Icon size={24} /> }
-          </Link>
-  
+    {
+      data && 
+      <>
+        <button
+          className="heartButton"
+          onClick={handleEditDish}
+        >
+          {Icon && <Icon size={24} /> }
+        </button>
+
         <div className="containerImg">
           <img 
           src={image} 
           alt="foto do prato" 
-          onClick={handleClickEditDish}
-          />
+        />
 
-          <Link to="/details">
-              {data.title} 
-              <span><FaAngleRight /></span>
-              <p>{data.description}</p>
-          </Link>
+        <button onClick={handleDishDetails} >
+            {data.title} 
+          <span><FaAngleRight /></span>
+        </button>
+        
+        <p className="descript">{data.description}</p>
 
-          <p>{`R$ ${data.price}`}</p>
-        </div>
-        </>
-      }
+        <p>{`R$ ${data.price}`}</p>
+      </div>
+      </>
+    }
 
-    </Container>
-  )
+  </Container>
+)
 }

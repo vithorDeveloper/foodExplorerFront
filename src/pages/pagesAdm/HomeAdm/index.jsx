@@ -7,6 +7,7 @@ import { HeaderMobile } from "../../../components/mobile/headerAdm"
 import { HeaderDesktop} from "../../../components/desktop/headerAdm"
 import { DishCardMobile } from "../../../components/mobile/dishCardAdm"
 import { DishCardDesktop } from "../../../components/desktop/dishCardAdm"
+import { Menu } from "../../../components/mobile/menu"
 
 import { useEffect, useState } from "react"
 
@@ -17,6 +18,11 @@ import assets from "../../../assets/pngegg 2.svg"
 export function HomeAdm(){
   const [search, setSearch] = useState("");
   const [dishes, setDishes] = useState([]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
 
   useEffect(() => {
     async function searchDishes() {
@@ -29,8 +35,10 @@ export function HomeAdm(){
 
   return(
     <Container>
-      <HeaderMobile title={"admin"} onChange={e => setSearch(e.target.value)}/>
+      <HeaderMobile title={"admin"} toggleMenu={toggleMenu}/>
       <HeaderDesktop title={"admin"} onChange={e => setSearch(e.target.value)}/>
+
+      {isMenuOpen && <Menu />}
 
       <div className="containerMacarrone">
           <img src={assets} alt="" />

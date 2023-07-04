@@ -5,7 +5,8 @@ import logo from "../../../assets/brand2.png"
 
 import { useAuth } from "../../../hooks/authContext";
 
-export function HeaderMobile({title}){
+
+export function HeaderMobile({title, toggleMenu}){
   const {signOut} = useAuth()
   const navigate = useNavigate()
 
@@ -17,11 +18,12 @@ export function HeaderMobile({title}){
       signOut()
     }
   }
+  
 
   return(
     <Container>
       <FaBars size={24}
-      onClick={handleSingOut}
+      onClick={toggleMenu}
       />
 
       <div>

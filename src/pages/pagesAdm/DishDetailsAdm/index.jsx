@@ -6,9 +6,9 @@ import { Button } from "../../../components/responsive/button"
 import { FooterMobile } from "../../../components/mobile/footer"
 import { FooterDesktop } from "../../../components/desktop/footer"
 import { Tags } from "../../../components/responsive/tagIngredient"
-import { TextButton } from "../../../components/responsive/textButton"
-import { HeaderMobile } from "../../../components/mobile/headerClient"
-import { HeaderDesktop} from "../../../components/desktop/headerClient"
+import { HeaderMobile } from "../../../components/mobile/headerAdm"
+import { HeaderDesktop} from "../../../components/desktop/headerAdm"
+import { Menu } from "../../../components/mobile/menu"
 
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -19,6 +19,11 @@ import prato from "../../../assets/salada.svg"
 export function DishDetailsAdm(){
   const [data, setData] = useState(null)
   const [image, setImage] = useState(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
   
   const navigate = useNavigate()
   const params = useParams()
@@ -50,8 +55,10 @@ export function DishDetailsAdm(){
   return(
     <Container>
 
-      <HeaderMobile title={"admin"}/>
+      <HeaderMobile title={"admin"} toggleMenu={toggleMenu}/>
       <HeaderDesktop title={"admin"}/>
+
+      {isMenuOpen && <Menu />}
 
       <Link to="/">
         {FaChevronLeft()}
@@ -60,28 +67,43 @@ export function DishDetailsAdm(){
 
       <SectionMobile>
 
-        <div className="containerDish">
-            <img src={prato} alt="" />
+      {
+        data && 
 
-            <div>
-              <h3>Salada Ravanello</h3>
-              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</p>
-            </div>
+        <div>
+
+          <div className="containerDish">
+            <img src={image} alt="foto do prato" />
+          </div>
+
+          <div>
+              <div className="containerTitulo">
+                <h3>{data.title}</h3>
+                <p>{data.description}</p>
+              </div>
+
+            {
+              data.ingredients &&
+              <div className="containerTags">
+              {
+                data.ingredients.map(ingredient => (
+                  <Tags 
+                  key={String(ingredient.id)}
+                  title={ingredient.name}
+                  />
+                ))
+              }
+              </div>
+
+            }
+                <Button 
+                title="Editar prato"
+                onClick={handleDishEdit}
+                />
+          </div>
+
         </div>
-
-        <div className="containerTags">
-          <Tags title="alface"/>
-          <Tags title="cebola"/>
-          <Tags title="pão naan"/>
-          <Tags title="pepino"/>
-          <Tags title="rabanete"/>
-          <Tags title="tomate"/>
-        </div>
-
-        <Button 
-          title="Editar prato"
-          onClick={handleDishEdit}
-        />
+      }
 
       </SectionMobile>
 
@@ -119,13 +141,10 @@ export function DishDetailsAdm(){
               </div>
 
             }
-{/* 
-              <button to="/edit" className="containerButton"> */}
                 <Button 
                 title="Editar prato"
                 onClick={handleDishEdit}
                 />
-              {/* </button> */}
           </div>
 
         </div>

@@ -8,6 +8,7 @@ import { FooterDesktop } from "../../../components/desktop/footer"
 import { HeaderMobile } from "../../../components/mobile/headerAdm"
 import { HeaderDesktop} from "../../../components/desktop/headerAdm"
 import { NewIngredient } from "../../../components/responsive/newIngredient"
+import { Menu } from "../../../components/mobile/menu"
 
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -27,6 +28,11 @@ export function EditDish(){
   const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState("");
   const [isString, setIsString] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
 
   const params = useParams();
   
@@ -110,66 +116,116 @@ export function EditDish(){
   return(
     <Container>
 
-    <HeaderMobile title={"admin"}/>
+    <HeaderMobile title={"admin"} toggleMenu={toggleMenu}/>
     <HeaderDesktop title={"admin"}/>
 
     <MainMobile>
+    {isMenuOpen && <Menu />}
+
+
+      <Form>
       <Link to="/">
         <FaChevronLeft/>
         <span>voltar</span> 
       </Link>
-
-      <Form>
+      
         <h1>Editar prato</h1>
 
-        <p>Imagem do prato</p>
-          <Input 
-            icon={FaDownload}
-            placeholder={"Selecione imagem para alterá-la"}
-          />
+        <div>
+              
+                <div className="containerOne">
+                  <div className="imageDish">
 
-        <p>Nome</p>
-          <Input 
-            placeholder={"Salada ceasar"}
-          />
+                    <p>Imagem do prato</p>
+                      <label htmlFor="avatar">
 
-        <p>Categoria</p>
-          <Input 
-            className="imgDish"
-            icon={FaAngleDown}
-            placeholder={"Refeição"}
-          />
+                        <FaDownload size={22}/>
+                        Selecione uma imagem
 
-        <p>Ingredientes</p>
-          <div className="containerTags">
-            <NewIngredient 
-              placeholder={"adicionar"}
-              isNew={true}
-            />
-            <NewIngredient 
-              placeholder={"macarrão"}
-            />
-          </div>
+                        <input 
+                        type="file" 
+                        id="avatar"
+                        onChange={e => setImage(e.target.files[0])}
+                        />
+                      </label>
+                  </div>
+      
+                  <div className="inputName">
+                    <p>Nome</p>
+                      <Input 
+                        onChange={e => setTitle(e.target.value)}
+                        value={title}
+                        placeholder={data && data.title}
+                      />
+                  </div>
+                
+  
+                  <div className="inputSnack">
+                    <p>Categoria</p>
+                    <select 
+                      onChange={e => setCategory(e.target.value)}
+                      value={category}
+                    >
+                      <option value="Refeição">Refeição</option>
+                      <option value="Bebidas">Bebidas</option>
+                      <option value="Sobremesas">Sobremesas</option>
+                    </select>
+                  </div>
+                </div>
+  
+            <div className="containerTwo">                  
+                  <div>
+                  <p>Ingredientes</p>
+                      <div className="containerTags">
+                        {ingredients.map((ingredient, index) => (
+                          <NewIngredient
+                            key={String(index)}
+                            value={ingredient.name}
+                            onClick={() => handleRemoveIngredient(ingredient)}
+                            isNew={false}
+                          />
+                        ))}
+                          <NewIngredient
+                            placeholder={"adicionar"}
+                            isNew={true}
+                            onChange={e => setNewIngredient(e.target.value)}
+                            value={newIngredient}
+                            onClick={handleAddIngredient}
+                          />
+                        </div>
+                      
+                  </div>
 
-        <p>preço</p>
-          <Input 
-          placeholder={"R$ 40,00"}
-          />
+              <div className="inputPrice">
+                <p>preço</p>
+                  <Input 
+                    value={price}
+                    placeholder={data && data.price}
+                    onChange={e => setPrice(e.target.value)}
+                  />
+              </div>
+            </div>
+    
+            <p>Descrição</p>
+              <TextArea 
+                value={description}
+                placeholder={data && data.description}
+                onChange={e => setDescription(e.target.value)}
+              />  
+    
+            <div className="containerButtons">
+              <Button 
+                title={"Excluir prato"}
+                onClick={handleDishDeleted}
+              />
+    
+              <Button 
+                title={"Salvar alterações"}
+                onClick={handleSaveDish}
+              />
+            </div>
 
-        <p>Descrição</p>
-          <TextArea 
-          placeholder="A Salada César é uma opção refrescante para o verão."
-          />  
-
-        <div className="containerButtons">
-          <Button 
-            title={"Excluir prato"}
-          />
-
-          <Button 
-            title={"Salvar alterações"}
-          />
-        </div>
+            </div>
 
       </Form>
     </MainMobile>

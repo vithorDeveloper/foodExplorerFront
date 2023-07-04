@@ -16,16 +16,14 @@ export const Container = styled.div`
         display: none;
     }
 
-    >div:first-child{
-      margin-bottom: 3.6rem
-    }
-
     >a{
       font-size: 2.4rem;
-      padding-bottom: 1.6rem;
+      padding: 2.4rem 0 1.6rem 1.8rem;
 
-      position: relative;
-      left: 2.8rem;
+      display: flex;
+      align-items: center;
+
+      color: ${({ theme }) => theme.colors.brown };
     }
 
   @media (min-width: 768px) {
@@ -64,58 +62,52 @@ export const Container = styled.div`
 export const SectionMobile = styled.section`
   padding: 0 5.6rem;
 
-  >.containerDish{
-    img{
-      width: 26rem;
-      padding-bottom: 1.6rem;
+  div{
+      >.containerDish{
+      img{
+        width: 26rem;
+        padding-bottom: 1.6rem;
+      }
     }
 
-    h3{
-      font-size: 2.7rem;
-      padding-bottom: 2.4rem;
+    >.containerTitulo{
+      h3{
+        font-size: 2.7rem;
+        padding-bottom: 2.4rem;
+      }
+
+      p{
+        font-size: 1.6rem;
+        margin: 0 auto;
+
+        width: 30rem;
+      }
     }
 
-    p{
-      font-size: 1.6rem;
-      margin: 0 auto;
-      padding-bottom: 2.4rem;
-
-      width: 30rem;
-    }
-  }
-
-  >.containerTags{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-
-    margin-bottom: 4.8rem;
-  }
-
-  >.containerButton{
+    >.containerTags{
       display: flex;
-      gap: 1.6rem;
-      margin: 0 auto 5.4rem;
-      max-width: 60rem;
-
-    .containerQuantity{
-      display: flex;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
-      
-      font-size: 2rem;
-      font-weight: bold;
+
+      margin: 2rem 0 4rem;
     }
 
-  >button{
-    background-color: ${({ theme }) => theme.colors.tomato};
+    >.containerButton{
+        display: flex;
+        gap: 1.6rem;
+        margin: 0 auto 5.4rem;
+        max-width: 60rem;
 
-    display: flex;
-    justify-content: center;
-    gap: .9rem;
+    >button{
+      background-color: ${({ theme }) => theme.colors.tomato};
 
-    font-size: 1.2rem;
+      display: flex;
+      justify-content: center;
+      gap: .9rem;
+
+      font-size: 1.2rem;
+    }
   }
 }
 `

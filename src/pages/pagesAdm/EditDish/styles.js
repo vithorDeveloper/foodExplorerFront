@@ -11,10 +11,6 @@ export const Container = styled.div`
         display: none;
     }
 
-    >div:first-child{
-      margin-bottom: 1rem;
-    }
-
     >div:last-child{
       position: relative;
     }
@@ -74,16 +70,14 @@ export const TextArea = styled.textarea`
 export const Form = styled.form`
     padding: 2.4rem 0 5.3rem;
 
-      >h1{
+    >h1{
       padding-bottom: 2rem;
     }
 
-    >p{
-      padding-bottom: .8rem;
-    }
+    div{
 
-    >div{
-      margin-bottom: 2.4rem;
+    p{
+        padding-bottom: .8rem;
     }
 
     >div:nth-child(7){
@@ -139,10 +133,50 @@ export const Form = styled.form`
           }
         }
       }
+    }
 `
 
 export const MainMobile = styled.main`
-    padding: 0 3.2rem;
+
+    form{
+      padding: 0 3.2rem;
+
+      >a{
+        font-size: 1.8rem;
+
+        padding: 2rem 0;
+  
+        display: flex;
+        align-items: center;
+  
+        color: ${({ theme }) => theme.colors.brown };
+      }
+
+      p{
+        padding-top: 2.4rem;
+      }
+
+      select{
+        width: 100%;
+
+        border-radius: 0.5rem;
+
+        padding: 1.2rem;
+
+        border: none;
+
+        background-color: #9D978E;
+        color: ${({ theme }) => theme.colors.brown};
+
+        outline: none;
+      }
+
+      .imageDish{
+        label{
+          margin: 0;
+        }
+      }
+    }
 `
 
 export const MainDesktop = styled.main`
@@ -153,6 +187,16 @@ export const MainDesktop = styled.main`
   >form{
     width: 80%;
 
+    >a{
+      font-size: 2.4rem;
+
+      display: flex;
+      align-items: center;
+
+      color: ${({ theme }) => theme.colors.brown };
+    }
+
+    
     h1{
       padding-top: 2.4rem;
     }
@@ -216,6 +260,8 @@ export const MainDesktop = styled.main`
               width: 20%;
             }
           }
+        margin-bottom:2.4rem;
+
         }
 
         .inputPrice{
