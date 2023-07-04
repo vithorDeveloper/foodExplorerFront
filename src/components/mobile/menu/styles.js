@@ -20,4 +20,8 @@ export const Container = styled.div`
             margin:  0 .8rem;
             padding-bottom: 2rem;
             }
+
+@media screen and (min-width: 768px) {
+    display: none;
+}
 `

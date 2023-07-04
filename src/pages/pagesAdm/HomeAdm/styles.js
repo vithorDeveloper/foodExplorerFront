@@ -7,7 +7,7 @@ export const Container = styled.div`
     overflow: hidden;
 
     >div:nth-child(2),
-    >footer:nth-child(5){
+    .footer-desktop{
         display: none;
     }
     
@@ -52,18 +52,19 @@ export const Container = styled.div`
 @media (min-width: 768px){
 
     >div:first-child,
-    >footer:nth-child(6),
+    >.footer-mobile,
     .menuMobile{
         display: none;
     }
 
     >div:nth-child(2),
-    >footer:nth-child(5){
+    >.footer-desktop{
         display: flex;
     }
 
-    >footer:nth-child(5){
+    >.footer-desktop{
         position: relative;
+        margin-top: 8.8rem;
     }
 
     >.containerMacarrone{

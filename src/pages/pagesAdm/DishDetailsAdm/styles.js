@@ -11,9 +11,13 @@ export const Container = styled.div`
     overflow-x: hidden;
 
     >div:nth-child(2),
-    >section:nth-child(6),
-    >footer:last-child{
+    >section .sectionDesktop{
         display: none;
+    }
+
+    >footer{
+      position: absolute;
+      bottom: 0;
     }
 
     >a{
@@ -29,14 +33,12 @@ export const Container = styled.div`
   @media (min-width: 768px) {
 
     >div:first-child,
-    >section:nth-child(4),
-    >footer:nth-child(5){
+    >section .sectionMobile{
         display: none;
     }
 
     >div:nth-child(2),
-    >section:nth-child(6),
-    >footer:last-child{
+    >section .sectionDesktop{
           display: flex;
     } 
   }

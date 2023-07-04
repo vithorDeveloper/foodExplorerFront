@@ -3,8 +3,7 @@ import { Container, SectionMobile, SectionDesktop } from "./styles"
 import { Link } from "react-router-dom"
 import { FaChevronLeft } from "react-icons/fa"
 import { Button } from "../../../components/responsive/button"
-import { FooterMobile } from "../../../components/mobile/footer"
-import { FooterDesktop } from "../../../components/desktop/footer"
+import { Footer } from "../../../components/responsive/footer"
 import { Tags } from "../../../components/responsive/tagIngredient"
 import { HeaderMobile } from "../../../components/mobile/headerAdm"
 import { HeaderDesktop} from "../../../components/desktop/headerAdm"
@@ -70,7 +69,7 @@ export function DishDetailsAdm(){
       {
         data && 
 
-        <div>
+        <div className="sectionMobile">
 
           <div className="containerDish">
             <img src={image} alt="foto do prato" />
@@ -107,15 +106,12 @@ export function DishDetailsAdm(){
 
       </SectionMobile>
 
-        <FooterMobile />
-
-
       <SectionDesktop>
 
       {
         data && 
 
-        <div>
+        <div className="sectionDesktop">
 
           <div className="containerDish">
             <img src={image} alt="foto do prato" />
@@ -152,7 +148,7 @@ export function DishDetailsAdm(){
 
       </SectionDesktop>
 
-        <FooterDesktop />
+        <Footer/>
 
     </Container>
   )

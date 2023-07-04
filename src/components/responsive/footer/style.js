@@ -34,4 +34,38 @@ export const Container = styled.footer`
   >span{
     font-size: 1.2rem;
 }
+
+@media(min-width: 768px){
+    width: 100vw;
+
+    padding: 2.4rem 14%;
+
+    background-color: ${({ theme }) => theme.colors.white};
+    display:  flex;
+
+    justify-content: space-between;
+
+  >div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    img{
+    width: 1.5rem;
+    height: 1.7rem;
+    }
+
+    p{
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: ${({ theme }) => theme.colors.green_300};
+    position: relative;
+    bottom: .1rem;
+    }
+  }
+
+  >span{
+    font-size: 1.5rem;
+}
+}
 `

@@ -1,8 +1,7 @@
 import { Container, Section } from "./styles"
 
 import { FaPen } from 'react-icons/fa'
-import { FooterMobile } from "../../../components/mobile/footer"
-import { FooterDesktop } from "../../../components/desktop/footer"
+import { Footer } from "../../../components/responsive/footer"
 import { HeaderMobile } from "../../../components/mobile/headerAdm"
 import { HeaderDesktop} from "../../../components/desktop/headerAdm"
 import { DishCardMobile } from "../../../components/mobile/dishCardAdm"
@@ -133,8 +132,7 @@ export function HomeAdm(){
             </div>
       </Section>
 
-      <FooterDesktop />
-      <FooterMobile />
+        <Footer />
     </Container>
   )
 }

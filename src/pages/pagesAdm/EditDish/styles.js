@@ -4,10 +4,10 @@ export const Container = styled.div`
     background: rgb(65,196,141);
     background: linear-gradient(180deg, rgba(65,196,141,1) 0%, rgba(190,230,205,1) 100%);
     color: ${({ theme }) => theme.colors.brown }; 
+    overflow-x: hidden;
 
     >div:nth-child(2),
-    >main:nth-child(5),
-    >footer:nth-child(6){
+    >main:nth-child(4){
         display: none;
     }
 
@@ -23,14 +23,12 @@ export const Container = styled.div`
     }
 
     >div:first-child,
-    >main:nth-child(3),
-    >footer:nth-child(4){
+    >main:nth-child(3){
       display: none;
     }
 
     >div:nth-child(2),
-    >main:nth-child(5),
-    >footer:nth-child(6){
+    >main:nth-child(4){
       display: flex;
     }
   }
@@ -98,6 +96,7 @@ export const Form = styled.form`
     >.containerButtons{
       display: flex;
       gap: 3.2rem;
+      margin-bottom: 4rem;
 
       >button:first-child{
         background-color: #9D978E;
@@ -140,6 +139,7 @@ export const MainMobile = styled.main`
 
     form{
       padding: 0 3.2rem;
+      margin: 0 auto;
 
       >a{
         font-size: 1.8rem;

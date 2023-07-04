@@ -6,8 +6,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.colors.brown }; 
 
     >div:nth-child(2),
-    >main:nth-child(5),
-    >footer:nth-child(6){
+    >main:nth-child(4){
         display: none;
     }
 
@@ -23,20 +22,18 @@ export const Container = styled.div`
     }
 
     >div:first-child,
-    >main:nth-child(3),
-    >footer:nth-child(4){
+    >main:nth-child(3){
       display: none;
     }
 
     >div:nth-child(2),
-    >main:nth-child(5),
-    >footer:nth-child(6){
+    >main:nth-child(4){
       display: flex;
     }
   }
 
   @media (min-width: 1024px){
-    main:nth-child(5){
+    main:nth-child(4){
       >form{
         width: 60%;
       }

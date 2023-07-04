@@ -2,7 +2,7 @@ import { Container, Section } from "./styles"
 
 import { RiCloseFill, RiSearchLine } from 'react-icons/ri'
 import { Input } from "../../../components/responsive/input"
-import { FooterMobile } from "../../../components/mobile/footer"
+import { Footer } from "../../../components/responsive/footer"
 
 export function MenuAdm(){
   return(
@@ -22,7 +22,7 @@ export function MenuAdm(){
           </div>
         </Section>
         
-      <FooterMobile />
+      <Footer />
 
     </Container>
   )

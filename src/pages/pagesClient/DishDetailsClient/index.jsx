@@ -2,8 +2,7 @@ import { Container, SectionMobile, SectionDesktop } from "./styles"
 
 import { Link } from 'react-router-dom'
 import { Button } from "../../../components/responsive/button"
-import { FooterMobile } from "../../../components/mobile/footer"
-import { FooterDesktop } from "../../../components/desktop/footer"
+import { Footer } from "../../../components/responsive/footer"
 import { Tags } from "../../../components/responsive/tagIngredient"
 import { HeaderMobile } from "../../../components/mobile/headerClient"
 import { TextButton } from "../../../components/responsive/textButton"
@@ -55,8 +54,6 @@ export function DishDetailsClient(){
 
     </SectionMobile>
 
-      <FooterMobile />
-
     <SectionDesktop>
 
       <div className="containerDish">
@@ -91,7 +88,7 @@ export function DishDetailsClient(){
 
     </SectionDesktop>
 
-      <FooterDesktop />
+      <Footer />
       
     </Container>
   )

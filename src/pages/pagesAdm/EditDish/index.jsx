@@ -3,8 +3,7 @@ import { Container, Form, TextArea, MainMobile, MainDesktop } from "./styles"
 import { Link } from "react-router-dom"
 import { Input } from "../../../components/responsive/input"
 import { Button } from "../../../components/responsive/button"
-import { FooterMobile } from "../../../components/mobile/footer"
-import { FooterDesktop } from "../../../components/desktop/footer"
+import { Footer } from "../../../components/responsive/footer"
 import { HeaderMobile } from "../../../components/mobile/headerAdm"
 import { HeaderDesktop} from "../../../components/desktop/headerAdm"
 import { NewIngredient } from "../../../components/responsive/newIngredient"
@@ -230,8 +229,6 @@ export function EditDish(){
       </Form>
     </MainMobile>
 
-      <FooterMobile />
-
     <MainDesktop>
 
       <Form>
@@ -340,7 +337,7 @@ export function EditDish(){
       </Form>
     </MainDesktop>
     
-      <FooterDesktop />
+      <Footer />
 
     </Container>
   )

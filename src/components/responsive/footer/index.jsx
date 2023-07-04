@@ -2,7 +2,7 @@ import { Container } from "./style";
 
 import logo from '../../../assets/brand.png'
 
-export function FooterDesktop(){
+export function Footer(){
   return(
     <Container>
       <div>
