@@ -6,11 +6,11 @@ import { AppAdmRoutes } from "./appAdm.routes"
 import { AppClientRoutes } from "./appClient.routes"
 
 export function Routes(){
-const { user } = useAuth()
+  const { user } = useAuth()
 
-  return(
+  return (
     <BrowserRouter>
-    {user ? <AppClientRoutes /> : <AuthRoutes />}
-  </BrowserRouter>
+        {user ? (user.isAdm ? <AppAdmRoutes /> : <AppClientRoutes />) : (<AuthRoutes />)}
+    </BrowserRouter>
   )
 }

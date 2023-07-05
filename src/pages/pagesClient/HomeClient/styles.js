@@ -6,8 +6,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.colors.brown }; 
     overflow: hidden;
 
-    >div:nth-child(2),
-    >footer:nth-child(5){
+    >div:nth-child(2){
         display: none;
     }
     
@@ -48,7 +47,6 @@ export const Container = styled.div`
 @media (min-width: 768px){
 
     >div:first-child,
-    >footer:nth-child(6),
     .menuMobile{
         display: none;
     }
@@ -116,13 +114,32 @@ export const Section = styled.section`
         }
 
         >div{
+            max-width: 100%;
+            overflow-y: auto;
+
+
             >.dishDesktop{
             display: none;
             }
 
             >.dishMobile{
                 display: flex;
+
+                margin-bottom: 1rem;
             }
+        }
+
+        div::-webkit-scrollbar {
+            background-color: transparent;
+        }
+
+        div::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+        }
+
+        div::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
     @media (min-width: 768px){
@@ -139,6 +156,8 @@ export const Section = styled.section`
 
             .dishDesktop{
                 display: flex;
+
+                margin-bottom: 1rem;
             }
         }
     }

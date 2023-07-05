@@ -120,18 +120,31 @@ export const Section = styled.section`
     }
 
     >div{
+        max-width: 100%;
+        overflow-y: auto;
+
         >.dishMobile,
         >.dishDesktop{
         display: flex;
-        overflow-x: scroll;
-            ::-webkit-scrollbar {
-            display: none; 
-        } 
+        margin-bottom: 1rem;
         }
 
         .dishDesktop{
             display: none;
         }
+    }
+
+    div::-webkit-scrollbar {
+        background-color: transparent;
+    }
+
+    div::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+    }
+
+    div::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     @media (min-width: 768px){

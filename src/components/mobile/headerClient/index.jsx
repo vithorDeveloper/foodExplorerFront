@@ -10,15 +10,6 @@ export function HeaderMobile({title, toggleMenu}){
   const {signOut} = useAuth()
   const navigate = useNavigate()
 
-  function handleSingOut(){
-    const wantToLeave = window.confirm("Quer mesmo sair ?")
-
-    if(wantToLeave){
-      navigate(-1)
-      signOut()
-    }
-  }
-
   function featureAlert(){
     return alert("🎈 Estamos trabalhando nessa funcionalidade! 🎈")
   }
