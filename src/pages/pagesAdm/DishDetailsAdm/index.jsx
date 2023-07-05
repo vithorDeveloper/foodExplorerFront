@@ -13,8 +13,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { api } from "../../../services/api";
 
-import prato from "../../../assets/salada.svg"
-
 export function DishDetailsAdm(){
   const [data, setData] = useState(null)
   const [image, setImage] = useState(null)

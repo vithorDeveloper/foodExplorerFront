@@ -27,7 +27,12 @@ export const Container = styled.div`
       top: 1rem;
 
       background: transparent;
-      color: ${({ theme }) => theme.colors.brown}
+      color: ${({ theme }) => theme.colors.brown};
+    }
+
+    .red {
+      color: red;
+    }
     }
 
     >.containerImg{
@@ -38,11 +43,17 @@ export const Container = styled.div`
         width: 17rem;
       }
 
-      >a{
+      >button{
         display: block;
         padding-bottom: 1rem;
         color: ${({ theme }) => theme.colors.brown};
-        
+        font-size: 2.4rem;
+
+        max-width: 22rem;
+
+        margin: 0 auto;
+
+        background-color: transparent;
         >span{
           position: relative;
           top: .4rem;
@@ -56,6 +67,14 @@ export const Container = styled.div`
       p{
         color: orangered;
       }
+
+      >.descript{
+      padding: 1rem;
+      font-size: 1.2rem;
+      width: 20rem;
+      margin: 0 auto;
+      color: ${({ theme }) => theme.colors.brown};
+    }
     }
 
     >.containerQuantity{
@@ -66,6 +85,8 @@ export const Container = styled.div`
       
       font-size: 2.2rem;
       font-weight: bold;
+
+      cursor: pointer;
     }
 
     >button{
@@ -73,5 +94,4 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.colors.white};
       font-size: 1.6rem;
     }
-}
 `

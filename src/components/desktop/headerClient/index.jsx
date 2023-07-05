@@ -10,7 +10,7 @@ import { SignOut, ShoppingCart, MagnifyingGlass } from "@phosphor-icons/react"
 
 import logo from "../../../assets/brand2.png"
 
-export function HeaderDesktop({title}){
+export function HeaderDesktop({onChange, title}){
   const {signOut} = useAuth()
   const navigate = useNavigate()
 
@@ -23,21 +23,25 @@ export function HeaderDesktop({title}){
     }
   }
 
+  function featureAlert(){
+    return alert("🎈 Estamos trabalhando nessa funcionalidade! 🎈")
+  }
+
   return(
     <Container>
 
       <div>
         <img src={logo} alt="" />
         <h1>food explorer</h1>
-        <span>{title}</span>
       </div>
 
       <Input
         placeholder={"Busque por pratos ou ingredientes"}
         icon={MagnifyingGlass}
+        onChange={onChange}
       />
 
-      <div className="containerIcon">
+      <div className="containerIcon" onClick={featureAlert}>
         <ShoppingCart size={28} className="iconCar"/>
         <span>Pedidos <span>(0)</span></span>
       </div>

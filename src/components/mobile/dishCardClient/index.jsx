@@ -53,7 +53,7 @@ export function DishCardMobile({data, icon: Icon, ...rest}){
 
       <div className="containerQuantity">
         <FaMinus />
-        <p>{quant}</p>
+        <p>01</p>
         <FaPlus />
       </div>
 

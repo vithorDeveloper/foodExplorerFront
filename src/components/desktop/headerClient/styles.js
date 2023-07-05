@@ -57,6 +57,7 @@ export const Container = styled.div`
 
     border-radius: .5rem;
 
+    cursor: pointer;
     >span{
       display: flex;
       gap: .5rem;

@@ -10,7 +10,7 @@ const { user } = useAuth()
 
   return(
     <BrowserRouter>
-    {user ? <AppAdmRoutes /> : <AuthRoutes />}
+    {user ? <AppClientRoutes /> : <AuthRoutes />}
   </BrowserRouter>
   )
 }

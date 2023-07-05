@@ -62,7 +62,7 @@ export function EditDish(){
     const condition = window.confirm("Deseja mesmo excluir o prato ?");
 
     if(condition){
-      await api.delete(`/dishes/${user.id}`)
+      await api.delete(`/dishes/${params.id}`)
       navigate("/")
     }
   }
@@ -87,7 +87,8 @@ export function EditDish(){
 
       alert('Prato Atualizado');
       navigate("/");
-    } catch (error) {
+    } 
+    catch (error) {
       console.error(error);
     }
   }

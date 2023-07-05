@@ -12,17 +12,34 @@ export function DishCardDesktop({data, icon: Icon, ...rest}){
 
   const navigate = useNavigate()
 
-    const [image, setImage] = useState(null) 
+    const [image, setImage] = useState(null)
+    const [isLiked, setIsLiked] = useState(false); 
+    const [quantity, setQuantity] = useState(0);
     const {id} = data
+
+    const handleDecrease = () => {
+      if (quantity > 0) {
+        setQuantity(quantity - 1);
+      }
+    };
+
+    const handleIncrease = () => {
+      setQuantity(quantity + 1);
+    };
+
+    const formattedQuantity = quantity.toString().padStart(2, "0");
 
     function handleClickImage () {
       navigate(`/details/${id}`);
-  }
-
-  function handleClickEditDish () {
-      navigate(`/edit/${id}`);
-  }
+    }
   
+    const handleLike = () => {
+        setIsLiked(!isLiked);
+    }
+
+    function featureAlert(){
+      return alert("🎈 Estamos trabalhando nessa funcionalidade! 🎈")
+    }
 
     useEffect(() => {
         async function fetchImage(){
@@ -37,28 +54,32 @@ export function DishCardDesktop({data, icon: Icon, ...rest}){
   return(
     <Container {...rest}>
 
-      <button className="heartButton">
-          {Icon && <Icon size={24} />}
+      <button 
+        className={`heartButton ${isLiked ? 'red' : ''}`}
+        onClick={handleLike}
+        >
+          {Icon && <Icon size={34} />}
       </button>
 
       <div className="containerImg">
-          <img src={image} alt="" />
+          <img src={image} alt="" onClick={handleClickImage}/>
 
-          <Link to="/details">
+          <button onClick={handleClickImage}>
             {data.title} 
             <span><FaAngleRight /></span>
-          </Link>
+          </button>
 
+          <p className="descript">{`${data.description}`}</p>
           <p>{`R$ ${data.price}`}</p>
       </div>
 
       <div className="containerQuantity">
-          <FaMinus />
-          <p>{quant}</p>
-          <FaPlus />
+          <FaMinus onClick={handleDecrease}/>
+          <p>{formattedQuantity}</p>
+          <FaPlus onClick={handleIncrease}/>
       </div>
 
-      <Button title={"incluir"}/>
+      <Button title={"incluir"} onClick={featureAlert}/>
 
     </Container>
   )

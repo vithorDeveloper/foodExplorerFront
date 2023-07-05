@@ -7,7 +7,7 @@ export function AppClientRoutes(){
     return(
       <Routes>
         <Route path="/" element={<HomeClient/>} />
-        <Route path="/details" element={<DishDetailsClient/>} />
+        <Route path="/details/:id" element={<DishDetailsClient/>} />
       </Routes>
     )
 }

@@ -180,13 +180,10 @@ export const MainMobile = styled.main`
 `
 
 export const MainDesktop = styled.main`
-  width: 100%;
   display: flex;
   justify-content: center;
 
   >form{
-    width: 80%;
-
     >a{
       font-size: 2.4rem;
 
