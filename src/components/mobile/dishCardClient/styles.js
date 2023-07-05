@@ -8,7 +8,7 @@ export const Container = styled.div`
 
     text-align: center;
 
-    width: 20rem;
+    width: 22rem;
 
     flex: 0 0 auto;
 
@@ -33,6 +33,10 @@ export const Container = styled.div`
 
     }
 
+    .red {
+      color: red;
+    }
+
     >.containerImg{
       font-size: 1.8rem;
 
@@ -40,10 +44,12 @@ export const Container = styled.div`
         width: 10rem;
       }
 
-      >a{
-        display: block;
+      >button{
         padding-bottom: 1rem;
         color: ${({ theme }) => theme.colors.brown};
+        background-color: transparent;
+        font-size: 1.8rem;
+
         
         >span{
           position: relative;

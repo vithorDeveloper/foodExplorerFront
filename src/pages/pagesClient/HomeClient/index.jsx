@@ -20,7 +20,7 @@ export function HomeClient(){
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen)
   }
 
   useEffect(() => {
@@ -32,13 +32,12 @@ export function HomeClient(){
     searchDishes();
   }, [search]);
 
-
   return(
     <Container>
       <HeaderMobile toggleMenu={toggleMenu}/>
       <HeaderDesktop  onChange={e => setSearch(e.target.value)}/>
 
-      {isMenuOpen && <Menu />}
+      {isMenuOpen && <Menu/>}
 
       <div className="containerMacarrone">
         <img src={assets} alt="" />

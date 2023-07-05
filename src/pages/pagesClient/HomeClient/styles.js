@@ -19,7 +19,7 @@ export const Container = styled.div`
 
         border-radius: .5rem;
 
-        margin: 0 1.6rem 4rem 3.6rem;
+        margin: 4.4rem 1.6rem 4rem 3.6rem;
 
         padding-right: 2rem;
 
@@ -48,7 +48,8 @@ export const Container = styled.div`
 @media (min-width: 768px){
 
     >div:first-child,
-    >footer:nth-child(6){
+    >footer:nth-child(6),
+    .menuMobile{
         display: none;
     }
 
@@ -117,6 +118,10 @@ export const Section = styled.section`
         >div{
             >.dishDesktop{
             display: none;
+            }
+
+            >.dishMobile{
+                display: flex;
             }
         }
 

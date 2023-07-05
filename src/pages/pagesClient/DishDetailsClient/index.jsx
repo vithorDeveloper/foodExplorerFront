@@ -5,9 +5,8 @@ import { Button } from "../../../components/responsive/button"
 import { Footer } from "../../../components/responsive/footer"
 import { Tags } from "../../../components/responsive/tagIngredient"
 import { HeaderMobile } from "../../../components/mobile/headerClient"
-import { TextButton } from "../../../components/responsive/textButton"
 import { HeaderDesktop} from "../../../components/desktop/headerClient"
-import { FaMinus, FaPlus, FaShoppingCart, FaChevronLeft, FaEarlybirds } from "react-icons/fa"
+import { FaMinus, FaPlus, FaShoppingCart, FaChevronLeft} from "react-icons/fa"
 
 import { Menu } from "../../../components/mobile/menu"
 
@@ -67,8 +66,10 @@ export function DishDetailsClient(){
   return(
     <Container>
 
-      <HeaderMobile />
+      <HeaderMobile toggleMenu={toggleMenu}/>
       <HeaderDesktop />
+
+      {isMenuOpen && <Menu />}
 
       <Link to="/" className="buttonBack">
         <FaChevronLeft/>
@@ -80,40 +81,40 @@ export function DishDetailsClient(){
       {
 
       data && 
-        <div>
-        <div className="containerDish">
-          <img src={image} alt="" />
-  
-          <div>
-            <h3>{data.title}</h3>
-            <p>{data.description}</p>
+        <div className="sectionMobile">
+          <div className="containerDish">
+            <img src={image} alt="" />
+    
+            <div>
+              <h3>{data.title}</h3>
+              <p>{data.description}</p>
+            </div>
           </div>
-        </div>
-  
-        {
-          data.ingredients &&
-          <div className="containerTags">
+    
           {
-            data.ingredients.map(ingredient => (
-              <Tags 
-              key={String(ingredient.id)}
-              title={ingredient.name}
-              />
-            ))
+            data.ingredients &&
+            <div className="containerTags">
+            {
+              data.ingredients.map(ingredient => (
+                <Tags 
+                key={String(ingredient.id)}
+                title={ingredient.name}
+                />
+              ))
+            }
+            </div>
           }
-          </div>
-        }
   
-        <div className="containerButton">
-          <div className="containerQuantity">
-            <FaMinus />
-            <p>01</p>
-            <FaPlus />
+          <div className="containerButton">
+            <div className="containerQuantity">
+              <FaMinus onClick={handleDecrease}/>
+                <p>{formattedQuantity}</p>
+              <FaPlus onClick={handleIncrease}/>
+            </div>
+    
+            <Button icon={FaShoppingCart} size={16} title="pedir ∙ R$ 25,00" onClick={featureAlert}/>
           </div>
-  
-          <Button icon={FaShoppingCart} size={16} title="pedir ∙ R$ 25,00"/>
         </div>
-      </div>
       }
 
     </SectionMobile>
@@ -122,7 +123,7 @@ export function DishDetailsClient(){
 
     {
       data && 
-        <div>
+        <div className="sectionDesktop">
           <img src={image} alt="foto do prato" />
 
           <div>   

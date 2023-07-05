@@ -26,7 +26,7 @@ export function Menu(){
 
   return(
     <Container>
-    <div>
+      <div>
         <div className="linha"></div>
 
         <a href="#" onClick={handleHome}>Home</a>

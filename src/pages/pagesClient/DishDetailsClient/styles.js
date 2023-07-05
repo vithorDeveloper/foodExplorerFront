@@ -16,12 +16,8 @@ export const Container = styled.div`
     overflow-x: hidden;
 
     >div:nth-child(2),
-    >section:nth-child(6){
+    >section .sectionDesktop{
         display: none;
-    }
-
-    >div:first-child{
-      margin-bottom: 3.6rem
     }
 
     >.buttonBack{
@@ -30,7 +26,7 @@ export const Container = styled.div`
 
       font-size: 2.4rem;
       padding-bottom: 1.6rem;
-      margin:0 0 2rem 2rem;
+      margin: 2.4em 0 2rem 2rem;
 
       color: ${({ theme }) => theme.colors.brown };
     }
@@ -38,13 +34,13 @@ export const Container = styled.div`
 @media (min-width: 768px) {
 
     >div:first-child,
-    >section:nth-child(4),
+    >section .sectionMobile,
     >footer:nth-child(5){
         display: none;
     }
 
     >div:nth-child(2),
-    >section:nth-child(6),
+    >section .sectionDesktop,
     >footer:last-child{
         display: flex;
     }   
@@ -65,7 +61,8 @@ export const Container = styled.div`
 export const SectionMobile = styled.section`
   padding: 0 5.6rem;
 
-  >.containerDish{
+  div{
+    >.containerDish{
     img{
       width: 26rem;
       padding-bottom: 1.6rem;
@@ -118,6 +115,7 @@ export const SectionMobile = styled.section`
 
       font-size: 1.2rem;
     }
+  }
   }
 `
 

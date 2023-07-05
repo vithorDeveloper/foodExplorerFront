@@ -1,10 +1,10 @@
 import { Container } from "./styles";
 import { FaBars } from "react-icons/fa"
 import { useNavigate } from "react-router-dom"
-import logo from "../../../assets/brand2.png"
 
 import { useAuth } from "../../../hooks/authContext";
 
+import logo from "../../../assets/brand2.png"
 
 export function HeaderMobile({title, toggleMenu}){
   const {signOut} = useAuth()
@@ -18,10 +18,10 @@ export function HeaderMobile({title, toggleMenu}){
       signOut()
     }
   }
-  
 
   return(
     <Container>
+      
       <FaBars size={24}
       onClick={toggleMenu}
       />

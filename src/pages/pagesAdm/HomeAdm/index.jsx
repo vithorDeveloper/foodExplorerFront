@@ -40,12 +40,12 @@ export function HomeAdm(){
       {isMenuOpen && <Menu />}
 
       <div className="containerMacarrone">
-          <img src={assets} alt="" />
+        <img src={assets} alt="" />
 
-          <div>
-            <h3>Sabores inigualáveis</h3>
-            <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
-          </div>
+        <div>
+          <h3>Sabores inigualáveis</h3>
+          <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
+        </div>
       </div>
 
       <Section>
