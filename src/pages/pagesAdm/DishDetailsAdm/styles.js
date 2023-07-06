@@ -116,6 +116,11 @@ export const SectionMobile = styled.section`
 
 export const SectionDesktop = styled.section`
 @media (min-width: 768px){
+  >footer{
+      position: absolute;
+      bottom: 0;
+    }
+
   >div{
     display: flex;
     justify-content: center;
