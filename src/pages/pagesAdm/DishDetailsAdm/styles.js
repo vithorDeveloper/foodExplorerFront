@@ -16,10 +16,6 @@ export const Container = styled.div`
         display: none;
     }
 
-    /* >footer{
-      position: absolute;
-    } */
-
     >a{
       font-size: 2.4rem;
       padding: 2.4rem 0 1.6rem 1.8rem;
@@ -31,6 +27,10 @@ export const Container = styled.div`
     }
 
   @media (min-width: 768px) {
+    >footer{
+      position: absolute;
+      bottom: 0;
+    }
 
     >div:first-child,
     >section .sectionMobile{
@@ -116,10 +116,6 @@ export const SectionMobile = styled.section`
 
 export const SectionDesktop = styled.section`
 @media (min-width: 768px){
-  >footer{
-      position: absolute;
-      bottom: 0;
-    }
 
   >div{
     display: flex;
