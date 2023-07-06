@@ -36,7 +36,7 @@ export const Container = styled.div`
     }
 
     >.containerImg{
-      font-size: 2.2rem;
+      /* font-size: 2.2rem; */
       cursor: pointer;
 
       >img{
@@ -47,9 +47,9 @@ export const Container = styled.div`
         display: block;
         padding-bottom: 1rem;
         color: ${({ theme }) => theme.colors.brown};
-        font-size: 2.4rem;
+        font-size: 2.8rem;
 
-        width: 28rem;
+        width: 30rem;
 
         margin: 0 auto;
 
@@ -66,13 +66,13 @@ export const Container = styled.div`
 
       p{
         color: orangered;
-        font-size: 2.4rem;
+        font-size: 2.8rem;
       }
 
       >.descript{
       padding: 1rem;
       font-size: 2rem;
-      width: 24rem;
+      width: 30rem;
       margin: 0 auto;
       color: ${({ theme }) => theme.colors.brown};
     }
@@ -84,7 +84,7 @@ export const Container = styled.div`
       align-items: center;
       gap: 2rem;
       
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       font-weight: bold;
 
       cursor: pointer;

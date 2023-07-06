@@ -28,7 +28,7 @@ export const Container = styled.div`
 
 @media (min-width: 768px) {
 
-    >footer{
+    footer{
       position: absolute;
       bottom: 0;
     }

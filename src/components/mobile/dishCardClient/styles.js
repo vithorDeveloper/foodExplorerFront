@@ -8,7 +8,7 @@ export const Container = styled.div`
 
     text-align: center;
 
-    width: 24rem;
+    width: 22rem;
 
     flex: 0 0 auto;
 
@@ -41,14 +41,14 @@ export const Container = styled.div`
       font-size: 1.8rem;
 
       >img{
-        width: 12rem;
+        width: 10rem;
       }
 
       >button{
         padding-bottom: 1rem;
         color: ${({ theme }) => theme.colors.brown};
         background-color: transparent;
-        font-size: 2.2rem;
+        font-size: 1.8rem;
 
         
         >span{
@@ -63,7 +63,6 @@ export const Container = styled.div`
 
       p{
         color: orangered;
-        font-size: 2.2rem;
       }
     }
 
@@ -73,7 +72,7 @@ export const Container = styled.div`
       align-items: center;
       gap: 2rem;
       
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: bold;
     }
 
