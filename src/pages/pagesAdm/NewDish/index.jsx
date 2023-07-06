@@ -10,7 +10,6 @@ import { NewIngredient } from "../../../components/responsive/newIngredient"
 import { Menu } from "../../../components/mobile/menu"
 
 import { api } from "../../../services/api";
-import { useAuth } from "../../../hooks/authContext";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -66,7 +65,7 @@ async function handleAddDishes(){
     await api.post('/dishes', formData)
 
     alert("Opa!, mais um prato cadastrado")
-    navigate("/")
+    // navigate(-1)
 
   } catch (error) {
     return console.error(error)

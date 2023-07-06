@@ -83,7 +83,7 @@ export function EditDish(){
       await api.put(`/dishes/${params.id}`, formData);
 
       alert('Prato Atualizado');
-      navigate("/");
+      navigate(-1);
     } 
     catch (error) {
       console.error(error);

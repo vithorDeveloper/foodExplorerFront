@@ -31,6 +31,11 @@ export const Container = styled.div`
     >main:nth-child(4){
       display: flex;
     }
+
+    footer{
+      position: absolute;
+      bottom: 0;
+    }
   }
 
   @media (min-width: 1024px){
