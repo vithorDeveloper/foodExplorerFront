@@ -6,10 +6,6 @@ export const Container = styled.div`
     background: linear-gradient(180deg, rgba(65,196,141,1) 0%, rgba(190,230,205,1) 100%);
     color: ${({ theme }) => theme.colors.brown };
 
-    footer{
-      position: relative;
-    }
-
     text-align: center;
 
     overflow-x: hidden;
@@ -31,6 +27,11 @@ export const Container = styled.div`
     }
 
 @media (min-width: 768px) {
+
+    >footer{
+      position: absolute;
+      bottom: 0;
+    }
 
     >div:first-child,
     >section .sectionMobile,
