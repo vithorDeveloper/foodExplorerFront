@@ -7,17 +7,17 @@ import { useAuth } from "../../../hooks/authContext";
 import logo from "../../../assets/brand2.png"
 
 export function HeaderMobile({title, toggleMenu}){
-  const {signOut} = useAuth()
-  const navigate = useNavigate()
+  // const {signOut} = useAuth()
+  // const navigate = useNavigate()
 
-  function handleSingOut(){
-    const wantToLeave = window.confirm("Quer mesmo sair ?")
+  // function handleSingOut(){
+  //   const wantToLeave = window.confirm("Quer mesmo sair ?")
 
-    if(wantToLeave){
-      navigate(-1)
-      signOut()
-    }
-  }
+  //   if(wantToLeave){
+  //     navigate(-1)
+  //     signOut()
+  //   }
+  // }
 
   return(
     <Container>

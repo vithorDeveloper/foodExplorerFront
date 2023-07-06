@@ -26,7 +26,7 @@ export function EditDish(){
   const [category, setCategory] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState("");
-  const [isString, setIsString] = useState(null);
+  const [isString, setIsString] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -43,12 +43,9 @@ export function EditDish(){
           return alert("Não é possível adicionar campo vazio.")
       }
 
-      if (typeof(image) === 'string') {
-        setIsString(true)
-      }
 
       const { name } = newIngredient;
-      const newIngredientObj = { id: null, dish_id: null, name: newIngredient }; // Criar objeto com as propriedades esperadas
+      const newIngredientObj = { id: null, dish_id: null, name: newIngredient };
       setIngredients(prevState => [...prevState, newIngredientObj]);
 
       setNewIngredient("")
@@ -111,6 +108,15 @@ export function EditDish(){
 
     fetchData();
   }, [params.id]);
+
+  useEffect(() => {
+    if (typeof(image) === 'string') {
+      setIsString(true)
+    }
+    else{
+      setIsString(false)
+    }
+  }, [image])
   
 
   return(

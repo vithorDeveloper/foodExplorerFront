@@ -14,14 +14,10 @@ export function HeaderDesktop({onChange, title}){
   const {signOut} = useAuth()
   const navigate = useNavigate()
 
-  function handleSingOut(){
-    const wantToLeave = window.confirm("Quer mesmo sair ?")
-
-    if(wantToLeave){
-      navigate(-1)
-      signOut()
-    }
-  }
+  function handleLogout(){
+    navigate("/")
+    signOut()
+}
 
   function featureAlert(){
     return alert("🎈 Estamos trabalhando nessa funcionalidade! 🎈")
@@ -46,9 +42,11 @@ export function HeaderDesktop({onChange, title}){
         <span>Pedidos <span>(0)</span></span>
       </div>
 
-      <Link to="/">
-          <SignOut size={28} color="black" onClick={handleSingOut}/>
-      </Link>
+          <SignOut 
+            size={28} 
+            color="black" 
+            onClick={handleLogout}
+          />
 
     </Container>
   )

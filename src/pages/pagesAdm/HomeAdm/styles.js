@@ -1,6 +1,13 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+
+const scaleIn = keyframes`
+    from { transform: scale(0); opacity: 0; }  
+    to { transform: scale(1); opacity: 1; }
+`;
 
 export const Container = styled.div`
+    animation: ${scaleIn} 1s ease-in-out;
+
     background: rgb(65,196,141);
     background: linear-gradient(180deg, rgba(65,196,141,1) 0%, rgba(190,230,205,1) 100%);
     color: ${({ theme }) => theme.colors.brown }; 

@@ -11,14 +11,10 @@ export function HeaderDesktop({onChange, title}){
   const {signOut} = useAuth()
   const navigate = useNavigate()
 
-  function handleSingOut(){
-    const wantToLeave = window.confirm("Quer mesmo sair ?")
-
-    if(wantToLeave){
-      navigate(-1)
-      signOut()
-    }
-  }
+  function handleLogout(){
+    navigate("/")
+    signOut()
+}
 
   return(
     <Container>
@@ -42,9 +38,12 @@ export function HeaderDesktop({onChange, title}){
         <span>Novo prato</span>
       </Link>
 
-      <Link to="/login">
-          <SignOut size={28} color="black" onClick={handleSingOut}/>
-      </Link>
+      
+      <SignOut size={28} 
+        color="black" 
+        onClick={handleLogout}
+      />
+      
     </Container>
   )
 }

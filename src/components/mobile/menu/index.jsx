@@ -18,7 +18,7 @@ export function Menu({title}){
 
         <Link to="/">Home</Link>
         <Link  to="/new">Novo Prato</Link>
-        <a  onClick={handleLogout}>Logout</a>
+        <a onClick={handleLogout}>Logout</a>
       </div>
   </Container>
   )
