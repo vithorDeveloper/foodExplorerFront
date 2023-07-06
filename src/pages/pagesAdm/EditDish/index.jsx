@@ -56,12 +56,8 @@ export function EditDish(){
   }
 
   async function handleDishDeleted(){
-    const condition = window.confirm("Deseja mesmo excluir o prato ?");
-
-    if(condition){
       await api.delete(`/dishes/${params.id}`)
       navigate("/")
-    }
   }
 
   async function handleSaveDish() {
@@ -329,12 +325,13 @@ export function EditDish(){
     
             <div className="containerButtons">
               <Button 
+                type="button"
                 title={"Excluir prato"}
                 onClick={handleDishDeleted}
               />
     
               <Button 
-                type="submit"
+                type="button"
                 title={"Salvar alterações"}
                 onClick={handleSaveDish}
               />
