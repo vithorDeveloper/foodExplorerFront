@@ -49,7 +49,7 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.colors.brown};
         font-size: 2.4rem;
 
-        max-width: 28rem;
+        width: 28rem;
 
         margin: 0 auto;
 
@@ -66,13 +66,13 @@ export const Container = styled.div`
 
       p{
         color: orangered;
-        font-size: 3rem;
+        font-size: 2.4rem;
       }
 
       >.descript{
       padding: 1rem;
-      font-size: 2.5rem;
-      width: 20rem;
+      font-size: 2rem;
+      width: 24rem;
       margin: 0 auto;
       color: ${({ theme }) => theme.colors.brown};
     }
@@ -84,7 +84,7 @@ export const Container = styled.div`
       align-items: center;
       gap: 2rem;
       
-      font-size: 3rem;
+      font-size: 2.4rem;
       font-weight: bold;
 
       cursor: pointer;
@@ -93,6 +93,6 @@ export const Container = styled.div`
     >button{
       background-color: ${({ theme }) => theme.colors.tomato};
       color: ${({ theme }) => theme.colors.white};
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 `

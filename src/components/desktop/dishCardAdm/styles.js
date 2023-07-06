@@ -31,7 +31,7 @@ export const Container = styled.div`
     }
 
     >.containerImg{
-      font-size: 3rem;
+      font-size: 2rem;
 
       >img{
         width: 27rem;
@@ -41,7 +41,7 @@ export const Container = styled.div`
         display: block;
         padding-bottom: 1rem;
         color: ${({ theme }) => theme.colors.brown};
-        font-size: 3.5rem;
+        font-size: 2.8rem;
 
         width: 28rem;
 
@@ -57,8 +57,8 @@ export const Container = styled.div`
 
       .descript{
           padding: 1rem;
-          font-size: 2.5rem;
-          width: 20rem;
+          font-size: 2rem;
+          width: 24rem;
           margin: 0 auto;
           color: ${({ theme }) => theme.colors.brown};
           
@@ -66,7 +66,7 @@ export const Container = styled.div`
 
       p{
         color: orangered;
-        font-size: 3.5rem;
+        font-size: 2.8rem;
       }
     }
 }`
