@@ -65,7 +65,7 @@ async function handleAddDishes(){
     await api.post('/dishes', formData)
 
     alert("Opa!, mais um prato cadastrado")
-    // navigate(-1)
+    navigate("/")
 
   } catch (error) {
     return console.error(error)
@@ -255,6 +255,7 @@ async function handleAddDishes(){
 
           <div className="containerButtons">
             <Button 
+              type="button"
               title={"Salvar alterações"}
               onClick={handleAddDishes}
             />

@@ -83,7 +83,7 @@ export function EditDish(){
       await api.put(`/dishes/${params.id}`, formData);
 
       alert('Prato Atualizado');
-      navigate(-1);
+      navigate("/");
     } 
     catch (error) {
       console.error(error);
@@ -334,6 +334,7 @@ export function EditDish(){
               />
     
               <Button 
+                type="submit"
                 title={"Salvar alterações"}
                 onClick={handleSaveDish}
               />
