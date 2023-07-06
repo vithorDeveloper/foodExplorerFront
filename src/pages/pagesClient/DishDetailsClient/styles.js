@@ -7,8 +7,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.colors.brown };
 
     footer{
-      position: absolute;
-      bottom: 0;
+      position: relative;
     }
 
     text-align: center;

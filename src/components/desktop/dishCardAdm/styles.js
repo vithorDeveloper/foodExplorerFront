@@ -34,7 +34,7 @@ export const Container = styled.div`
       font-size: 2.2rem;
 
       >img{
-        width: 17rem;
+        width: 27rem;
       }
 
       >button{
@@ -43,7 +43,7 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.colors.brown};
         font-size: 2.4rem;
 
-        max-width: 28rem;
+        width: 28rem;
 
         margin: 0 auto;
 
