@@ -217,11 +217,13 @@ export function EditDish(){
     
             <div className="containerButtons">
               <Button 
+                type="button"
                 title={"Excluir prato"}
                 onClick={handleDishDeleted}
               />
     
               <Button 
+                type="button"
                 title={"Salvar alterações"}
                 onClick={handleSaveDish}
               />

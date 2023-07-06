@@ -160,6 +160,7 @@ async function handleAddDishes(){
 
           <div className="containerButtons">
             <Button 
+              type="button"
               title={"Salvar alterações"}
               onClick={handleAddDishes}
             />
