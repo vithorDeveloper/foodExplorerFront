@@ -58,7 +58,7 @@ export const Container = styled.div`
       .descript{
           padding: 1rem;
           font-size: 2rem;
-          width: 24rem;
+          width: 26rem;
           margin: 0 auto;
           color: ${({ theme }) => theme.colors.brown};
           
