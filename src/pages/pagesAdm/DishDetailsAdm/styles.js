@@ -16,10 +16,9 @@ export const Container = styled.div`
         display: none;
     }
 
-    >footer{
+    /* >footer{
       position: absolute;
-      bottom: 0;
-    }
+    } */
 
     >a{
       font-size: 2.4rem;
@@ -125,7 +124,7 @@ export const SectionDesktop = styled.section`
 
   >.containerDish{
     img{
-      width: 30rem;
+      width: 40rem;
       margin-right: 4rem;
     }
   }
@@ -135,12 +134,12 @@ export const SectionDesktop = styled.section`
       text-align: left;
 
       h3{
-        font-size: 3rem;
+        font-size: 4rem;
         padding-bottom: 1rem;
       }
 
       p{
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         padding-bottom: 2.4rem;
       }
     }
@@ -152,7 +151,7 @@ export const SectionDesktop = styled.section`
     margin-bottom: 2.4rem;
 
     >span{
-      font-size: 1.3rem;
+      font-size: 2rem;
     }
   }
 
@@ -166,7 +165,7 @@ export const SectionDesktop = styled.section`
         justify-content: center;
         gap: .9rem;
 
-        font-size: 1.2rem;
+        font-size: 2rem;
 
         width: 20rem;
       }

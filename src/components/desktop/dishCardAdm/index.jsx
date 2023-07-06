@@ -44,10 +44,11 @@ return(
           {Icon && <Icon size={24} /> }
         </button>
 
-        <div className="containerImg" onClick={handleDishDetails}>
+        <div className="containerImg">
           <img 
           src={image} 
           alt="foto do prato" 
+          onClick={handleDishDetails}
         />
 
         <button onClick={handleDishDetails} >
